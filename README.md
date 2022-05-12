@@ -1,1 +1,1 @@
-# EEERover
+# EEERover Specifications and Technical Guide
