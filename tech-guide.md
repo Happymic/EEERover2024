@@ -1,63 +1,51 @@
 # EEERover Technical Guide
 
-		During the Spring Term you should put your high-level design ideas into practice by creating the circuits, software and hardware that will implement your EEERover. This guide has three main aims: \begin{enumerate}
-			\item Document the additional hardware that you are provided with to get started
-			\item Specify the processes you will need to develop your design (e.g.~ordering components)
-			\item Provide some implementation ideas that you may find useful
-			\end{enumerate}
+ During the Spring Term you should put your high-level design ideas into practice by creating the circuits, software and hardware that will implement your EEERover. This guide has three main aims:
+ - Document the additional hardware that you are provided with to get started
+ - Specify the processes you will need to develop your design (e.g.~ordering components)
+ - Provide some implementation ideas that you may find useful
 	
-		Most of the contents of this guide is advisory. You do not have to use your EEEBug or the items in the starter kit if you wish to pursue different ideas. The only obligatory content is in Section~\ref{s:processes}, which relates to the constraints you face for budget, facilities and ordering processes.
+ Most of the contents of this guide is advisory. You do not have to use your EEEBug or the items in the starter kit if you wish to pursue different ideas. The only obligatory content is in Section, which relates to the constraints you face for budget, facilities and ordering processes.
 	
- ## Starter Kit
-	
-		\begin{table}
-			\caption{EEERover starter kit components}
-			\label{t:parts}
-			\footnotesize
-			\begin{tabu}{lX}
-				Qty.&	Description\\
-				\hline
-				\multicolumn{2}{l}{\textbf{EEEBug add-ons}} \\
-				1&		TB6612FNG motor driver module\\
-				2&		5 way PCB Receptacle, 2.54mm pitch\\
-				1&		6 way PCB Receptacle, 2.54mm pitch\\
-				1&		2×2 way PCB Receptacle, 2.54mm pitch\\
-				1&		Adafruit Metro M0 Express (Arduino-compatible MCU board)\\
-				1&		Adafruit WINC1500 WiFi Shield\\
-				1&		USB cable\\
-				4&		M2.5x12mm machine screw\\
-				8&		M2.5 nylon nut\\
-				\multicolumn{2}{l}{\textbf{Exolizard lizard simulator}} \\
-				1&		Exolizard\\
-				1&		8mm button magnet\\
-			\end{tabu}
-		\end{table}
+ ## Expansion Kit
+ You are provided with some parts to use with your Lab-in-a-Box kit to get started:
+ 
+| Qty         | Description |
+| ----------- | ----------- |
+| 1†          | Exorock Moon Rock Simulator  |
+| 2           | H-Bridge Motor Driver Module |	
+| 2           | Adafruit Metro M0 Microcontroller Module |
+| 2           | Adafruit WINC1500 WiFi Shield |
+| 2‡          | Magnet |
+
+† *A second Exorock may be available later, subject to availabilty*
+
+‡ To follow when available
 			
-		You are given one starter kit per group --- the contents are given in Table\ref{t:parts}. The parts will be kept by the technicians until you need them, so ask when you are ready. In addition to this, your EEEBug has been designed to support modification for work on this project. At the rear of the chassis is a mounting point for the Metro board and the central PCB has mounting points for the motor driver module. The breadboard, as you have already seen, is ideal for prototyping circuits but a number of mounting holes have also been provided for you to attach additional circuitry and components if you need more space. Finally, the design of the chassis is available to you in electronic format and you will have the opportunity to manufacture a modified version.
+ You are given one expansion kit per group in your allocated shelf. Use it with your existing EEEBug chassis. At the rear of the chassis is a mounting point for the Metro board and the central PCB has mounting points for the motor driver module. The breadboard, as you have already seen, is ideal for prototyping circuits but a number of mounting holes have also been provided for you to attach additional circuitry and components if you need more space. Finally, the design of the chassis is available to download that you can produce your own version.
     
+### Motor Driver
 
-		
- ### Motor Driver
-			\begin{figure}
-				\centering
-				\input{graphics/hbridge.tex}
-				\caption{A single channel of the H Bridge motor driver with the truth table for decoding logic inputs DIR and PWM}\label{f:hbridge}
-			\end{figure}
-			The motor driver is a two-channel integrated \emph{H Bridge} with decode logic, illustrated in Fig.~\ref{f:hbridge}. One channel controls the left motor and one channel controls the right motor. Each channel has two digital inputs, DIR and PWM, which are available on J2 of the EEEBug PCB (refer to the circuit diagram in the appendix of the EEEBug instructions). The digital inputs are decoded and used to control four \emph{MOSFETs}, which are low-impedance switching transistors. The inputs can be connected directly to digital outputs on the Metro board. DIR controls the motor direction and the motor speed can be controlled by applying a rectangular waveform to the PWM input and varying the duty cycle. The motor driver plugs into J4 and J5 of the EEEBug PCB.
-			
-		\subsection*{Metro board}
-			The Adafruit Metro M0 Express board is a embedded computing platform based on an ARM M0 microcontroller and compatible with the Arduino form factor, libraries and development tools. It is programmed in C++ and features digital inputs and outputs, inputs with digital-to-analogue conversion and PWM outputs. Internet connectivity is provided by a Adafruit WINC1500 WiFi Shield, which plugs into the Metro board.
+ ![H-Bridge](https://user-images.githubusercontent.com/4660308/168389450-4aef4f97-12a5-4336-b253-555195959f80.svg)
 
-			You are provided with demonstration code (see the labweb website) that shows the use of basic functions of the Metro board. The WiFi interface is used to host a basic webpage, which you will see hard-coded into the demonstration code. The webpage provides two links which, when pressed, turn on and off the onboard LED. Use the Arduino Serial Monitor to connect to the board via USB and you will see some debug messages reporting on the connection status. Whenever the webpage is retrieved you will see the HTML request made by the web browser.
+The motor driver is a two-channel integrated \emph{H Bridge} with decode logic, illustrated above. One channel controls the left motor and one channel controls the right motor. Each channel has two digital inputs, DIR and PWM, which are available on J2 of the EEEBug PCB (refer to the circuit diagram in the appendix of the EEEBug instructions). The digital inputs are decoded and used to control four \emph{MOSFETs}, which are low-impedance switching transistors. The inputs can be connected directly to digital outputs on the Metro board. DIR controls the motor direction and the motor speed can be controlled by applying a rectangular waveform to the PWM input and varying the duty cycle. The motor driver plugs into J4 and J5 of the EEEBug PCB.
 			
-			Arduino is a popular platform for prototyping and you will find a lot of information and many code examples on the internet. Use these resources but beware that many are provided by third parties and may not be well-written or even correct! 
+### Metro M0 board
+
+The Adafruit Metro M0 Express board is a embedded computing platform based on an ARM M0 microcontroller and compatible with the Arduino form factor, libraries and development tools. It is programmed in C++ and features digital inputs and outputs, inputs with digital-to-analogue conversion and PWM outputs. Internet connectivity is provided by a Adafruit WINC1500 WiFi Shield, which plugs into the Metro board.
+
+You are provided with demonstration code that shows the use of basic functions of the Metro board. The WiFi interface is used to host a basic webpage, which you will see hard-coded into the demonstration code. The webpage provides two links which, when pressed, turn on and off the onboard LED. Use the Arduino Serial Monitor to connect to the board via USB and you will see some debug messages reporting on the connection status. Whenever the webpage is retrieved you will see the HTML request made by the web browser.
 			
-			\subsubsection*{Arduino IDE}
-			You can install the Arduino IDE on your own computers by visiting the Arduino website. Additional libraries are needed to work with the Metro board and WiFi module. Follow the instructions at \href{
-			https://learn.adafruit.com/experimenters-guide-for-metro/setting-up-your-metro}{\texttt{learn.adafruit.com}}
-			to add support for the Metro board.
+Arduino is a popular platform for prototyping and you will find a lot of information and many code examples on the internet. Use these resources but beware that many are provided by third parties and may not be well-written or even correct! 
 			
-			The WiFi communication functions are provided by the WiFi101 library, which also must be installed with the Library Manager. The library installs its own set of example sketches and the reference is here: \url{https://www.arduino.cc/en/Reference/WiFi101}. The demonstration code from Labweb is based on these examples.
+### Arduino IDE
+
+Additional libraries are needed to use Arduino IDE with the Metro board and WiFi module. Follow the instructions at \href{https://learn.adafruit.com/experimenters-guide-for-metro/setting-up-your-metro}{\texttt{learn.adafruit.com}}
+to add support for the Metro board.
+			
+The WiFi communication functions are provided by the WiFi101 library, which also must be installed with the Library Manager. The library installs its own set of example sketches and the reference is here: \url{https://www.arduino.cc/en/Reference/WiFi101}. The demonstration code from Labweb is based on these examples.
+
+You can also develop code for the Metro M0 with Platformio, a plugin for the Visual Studio Code IDE.
 		
 			
  ### Connections and Power
