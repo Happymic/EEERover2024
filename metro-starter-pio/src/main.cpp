@@ -9,9 +9,9 @@
 
 const char ssid[] = "EEERover";     //  your network SSID (name)
 const char pass[] = "exhibition";   // your network password
+const int groupNumber = 0;         // Set your group number and IP address - only do this on the EEERover network
 const bool APMode = false;          // Option to host a WiFi network
 const int led =  LED_BUILTIN;
-const int groupNumber = 99;         // Set your group number and IP address
 
 void printWiFiStatus();
 void printMacAddress(byte mac[]);
@@ -38,7 +38,8 @@ void setup() {
   }
 
   //Configure the static IP address
-  WiFi.config(IPAddress(192,168,0,groupNumber));
+  if (groupNumber)
+    WiFi.config(IPAddress(192,168,0,groupNumber));
   
   if (APMode) { //Host a WiFi network
     Serial.print("Creating access point named: ");

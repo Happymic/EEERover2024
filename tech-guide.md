@@ -39,15 +39,9 @@ You are provided with demonstration code that shows the use of basic functions o
 			
 Arduino is a popular platform for prototyping and you will find a lot of information and many code examples on the internet. Use these resources but beware that many are provided by third parties and may not be well-written or even correct!
 			
-### Arduino IDE
+### Starter code
 
-Additional libraries are needed to use Arduino IDE with the Metro M0 board and WiFi module. [Follow the instructions from Adafruit](https://learn.adafruit.com/adafruit-metro-m0-express/arduino-ide-setup) to add support for the Metro M0 board in Arduino IDE.
-			
-The WiFi communication functions are provided by the WiFi101 library, which also must be installed with the Library Manager. The library installs its own set of example sketches and has an [API reference](https://www.arduino.cc/en/Reference/WiFi101). The demonstration code in this repository is based on these examples.
- - [ ] Confirm library choice
-
-You can also develop code for the Metro M0 with Platformio, a plugin for the Visual Studio Code IDE.
- - [ ] Provide Platformio Starter Project
+This repository contains microcontroller code to get you started. You can continue to use Arduino IDE as in the lab skills work, or you can develop with Visual Studio Code and Platformio.
 			
  ### Connections and Power
 			
