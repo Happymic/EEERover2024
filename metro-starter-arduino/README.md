@@ -6,9 +6,9 @@ It also acts on certain path strings in the HTTP request to switch an LED on and
 
 ## Building the project
 
-Additional libraries are needed to use Arduino IDE with the Metro M0 board and WiFi module. [Follow the instructions from Adafruit](https://learn.adafruit.com/adafruit-metro-m0-express/arduino-ide-setup) to add support for the Metro M0 board in Arduino IDE.
+Additional libraries are needed to use Arduino IDE with the Metro M0 board and WiFi module. [Follow the instructions from Adafruit](https://learn.adafruit.com/adafruit-metro-m0-express/arduino-ide-setup) to add support for the Metro M0 Express board in Arduino IDE.
 			
-The WiFi communication functions are provided by the WiFi101 library, which also must be installed with the Library Manager. The library installs its own set of example sketches and has an [API reference](https://www.arduino.cc/en/Reference/WiFi101). The demonstration code in this repository is based on these examples.
+The WiFi communication functions are provided by the WiFiWebServer library, which also must be installed with the Library Manager. The library installs its own set of example sketches and has an [API reference](https://github.com/khoih-prog/WiFiWebServer). The demonstration code in this repository is based on these examples.
 
 ## Network configuration
 
@@ -22,26 +22,18 @@ The `WiFiWebServer` class is used to handle HTTP requests from WiFi clients.
 HTTP is the protocol used to access websites and it is used here because it allows the creation of a simple user interface using a web browser.
 
 The server is configured in the `setup()` function using calls to `server.on()` to define what happens when requests are received.
-Each HTTP request has a path, which is the part of the url after the domain name or IP address. The server responds to three different paths:
- - `\` The root address, e.g. `http://192/168/0/10`
- - `\on` A request to turn the LED on
- -`\off` A request to turn the LED off
+Each HTTP request has a URI, which is the path of the resource that is requested. The server responds to three different URIs:
+ - `\` The root path, e.g. `http://192.168.0.10/`
+ - `\on` A request to turn the LED on, e.g. `http://192.168.0.10/on`
+ - `\off` A request to turn the LED off, e.g. `http://192.168.0.10/off`
 
-A different function is called when each request is received, but all respond by sending back the same default webpage.
+A different function is called when each request is received. A request to the root path returns the html code for the user interface. `\on` and `\off` set the LED and then return 'OK'.
+
+### The web interface
+
+The webpage built into the starter code shows how buttons can be used to send HTTP requests. `<button>` tags are used to define two buttons, which are formatted with some basic styling defined in the `<style>` section. Each button triggers a JavaScript function that is defined in the `<script>` section. A `XMLHttpRequest` object is used to send the HTML requests with its `send()` and `open()` methods.
 
 ## Next steps
 
 The code gives an example of sending information in both directions between the microcontroller and the remote client.
 It can be extended to include all the data you need to control your rover and get data back.
-
-### Improving the UI
-
-The basic webpage gives a poor quality UI. A better UI could be written using more complex HTML, but storing that on the microcontroller would slow down communication if it is transmitted on every request.
-A better approach could be to return the webpage only when the root path is requested. Some simple Javascript could allow the webpage to send requests for other paths like `/on` without refreshing the webpage.
-You could also create an app that sends these requests.
-
-### Alternatives to HTTP
-
-Using HTTP creates quite a lot of overhead in the headers that are transmitted in every transaction.
-You can use the WiFi101 library to send and receive raw data byte-by-byte.
-However, a web browser will not let you control the internet traffic at such a low level so you would need to write a user interface with an appropriate programming language and socket library to achieve this functionality.

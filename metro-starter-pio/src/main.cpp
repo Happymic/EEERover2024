@@ -44,17 +44,23 @@
 
 const char ssid[] = "EEERover";
 const char pass[] = "exhibition";
-const int groupNumber = 0; // Set your group number to fix the IP address - only do this on the EEERover network
+const int groupNumber = 0; // Set your group number to make the IP address constant - only do this on the EEERover network
 
+//Webpage to return when root is requested
 const char webpage[] = \
-"<html>\
+"<html><head><style>\
+.btn {background-color: inherit;padding: 14px 28px;font-size: 16px;}\
+.btn:hover {background: #eee;}\
+</style></head>\
 <body>\
-Click <a href=\"/on\">here</a> turn the LED on<br>\
-Click <a href=\"/off\">here</a> turn the LED off<br>\
+<button class=\"btn\" onclick=\"ledOn()\">LED On</button>\
+<button class=\"btn\" onclick=\"ledOff()\">LED Off</button>\
 </body>\
-</html>";
-
-int status = WL_IDLE_STATUS;     // the Wifi radio's status
+<script>\
+var xhttp = new XMLHttpRequest();\
+function ledOn() {xhttp.open(\"GET\", \"/on\"); xhttp.send();}\
+function ledOff() {xhttp.open(\"GET\", \"/off\"); xhttp.send();}\
+</script></html>";
 
 WiFiWebServer server(80);
 
@@ -64,18 +70,18 @@ void handleRoot()
   server.send(200, F("text/html"), webpage);
 }
 
-//Switch LED on and return root webpage
+//Switch LED on and acknowledge
 void ledON()
 {
   digitalWrite(LED_BUILTIN,1);
-  handleRoot();
+  server.send(200, F("text/plain"), F("OK"));
 }
 
-//Switch LED on and return root webpage
+//Switch LED on and acknowledge
 void ledOFF()
 {
   digitalWrite(LED_BUILTIN,0);
-  handleRoot();
+  server.send(200, F("text/plain"), F("OK"));
 }
 
 //Generate a 404 response with details of the failed request
@@ -102,29 +108,29 @@ void setup()
   digitalWrite(LED_BUILTIN, 0);
 
   Serial.begin(9600);
-  delay(200);
+  //Wait for the serial connection before proceeding. Remove this if the USB host won't be attached
+  while (!Serial);  
 
   Serial.println(F("\nStarting Web Server"));
 
+  //Check WiFi shield is present
   if (WiFi.status() == WL_NO_SHIELD)
   {
     Serial.println(F("WiFi shield not present"));
-    // don't continue
     while (true);
   }
 
-  //Configure the static IP address
+  //Configure the static IP address if group number is set
   if (groupNumber)
     WiFi.config(IPAddress(192,168,0,groupNumber+1));
 
   // attempt to connect to WiFi network
-  while ( status != WL_CONNECTED)
+  Serial.print(F("Connecting to WPA SSID: "));
+  Serial.println(ssid);
+  while (!WiFi.begin(ssid, pass))
   {
-    //delay(500);
-    Serial.print(F("Connecting to WPA SSID: "));
-    Serial.println(ssid);
-    // Connect to WPA/WPA2 network
-    status = WiFi.begin(ssid, pass);
+    delay(500);
+    Serial.print('.');
   }
 
   //Register the callbacks to respond to HTTP requests
