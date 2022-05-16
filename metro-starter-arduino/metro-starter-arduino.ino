@@ -1,182 +1,147 @@
-/*
-  EEERover starter code
-  For Metro M0 Express with WINC1500 WiFi module
-  Based on https://docs.arduino.cc/library-examples/wifi-library/WiFiWebServer
- */
+/**************************************************************************************************************************************
+  EEERover Starter Example
+  
+  Based on AdvancedWebServer.ino - Simple Arduino web server sample for SAMD21 running WiFiNINA shield
+  For any WiFi shields, such as WiFiNINA W101, W102, W13x, or custom, such as ESP8266/ESP32-AT, Ethernet, etc
+  
+  WiFiWebServer is a library for the ESP32-based WiFi shields to run WebServer
+  Forked and modified from ESP8266 https://github.com/esp8266/Arduino/releases
+  Forked and modified from Arduino WiFiNINA library https://www.arduino.cc/en/Reference/WiFiNINA
+  Built by Khoi Hoang https://github.com/khoih-prog/WiFiWebServer
+  Licensed under MIT license
+  
+  Copyright (c) 2015, Majenko Technologies
+  All rights reserved.
+  
+  Redistribution and use in source and binary forms, with or without modification,
+  are permitted provided that the following conditions are met:
+  
+  Redistributions of source code must retain the above copyright notice, this
+  list of conditions and the following disclaimer.
+  
+  Redistributions in binary form must reproduce the above copyright notice, this
+  list of conditions and the following disclaimer in the documentation and/or
+  other materials provided with the distribution.
+  
+  Neither the name of Majenko Technologies nor the names of its
+  contributors may be used to endorse or promote products derived from
+  this software without specific prior written permission.
+  
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+  ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+  WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+  DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+  ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+  (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+  ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ ***************************************************************************************************************************************/
+#define USE_WIFI_NINA         false
+#define USE_WIFI101           true
+#include <WiFiWebServer.h>
 
-#include <SPI.h>
-#include <WiFi101.h>
+const char ssid[] = "EEERover";
+const char pass[] = "exhibition";
+const int groupNumber = 0; // Set your group number to fix the IP address - only do this on the EEERover network
 
-const char ssid[] = "EEERover";     //  your network SSID (name)
-const char pass[] = "exhibition";   // your network password
-const int groupNumber = 0;         // Set your group number and IP address - only do this on the EEERover network
-const bool APMode = false;          // Option to host a WiFi network
-const int led =  LED_BUILTIN;
+const char webpage[] = \
+"<html>\
+<body>\
+Click <a href=\"/on\">here</a> turn the LED on<br>\
+Click <a href=\"/off\">here</a> turn the LED off<br>\
+</body>\
+</html>";
 
-void printWiFiStatus();
-void printMacAddress(byte mac[]);
+int status = WL_IDLE_STATUS;     // the Wifi radio's status
 
-int status = WL_IDLE_STATUS;
-WiFiServer server(80);
+WiFiWebServer server(80);
 
-void setup() {
-  //Initialize serial and wait for port to open:
-  Serial.begin(9600);
-  while (!Serial) {
-    ; // wait for serial port to connect. Needed for native USB port only
+//Return the web page
+void handleRoot()
+{
+  server.send(200, F("text/html"), webpage);
+}
+
+//Switch LED on and return root webpage
+void ledON()
+{
+  digitalWrite(LED_BUILTIN,1);
+  handleRoot();
+}
+
+//Switch LED on and return root webpage
+void ledOFF()
+{
+  digitalWrite(LED_BUILTIN,0);
+  handleRoot();
+}
+
+//Generate a 404 response with details of the failed request
+void handleNotFound()
+{
+  String message = F("File Not Found\n\n"); 
+  message += F("URI: ");
+  message += server.uri();
+  message += F("\nMethod: ");
+  message += (server.method() == HTTP_GET) ? F("GET") : F("POST");
+  message += F("\nArguments: ");
+  message += server.args();
+  message += F("\n");
+  for (uint8_t i = 0; i < server.args(); i++)
+  {
+    message += " " + server.argName(i) + ": " + server.arg(i) + "\n";
   }
+  server.send(404, F("text/plain"), message);
+}
 
-  Serial.println("EEERover Web Server");
+void setup()
+{
+  pinMode(LED_BUILTIN, OUTPUT);
+  digitalWrite(LED_BUILTIN, 0);
 
-  pinMode(led, OUTPUT);      // set the LED pin mode
+  Serial.begin(9600);
+  delay(200);
 
-  // check for the presence of the shield:
-  if (WiFi.status() == WL_NO_SHIELD) {
-    Serial.println("WiFi shield not present");
+  Serial.println(F("\nStarting Web Server"));
+
+  if (WiFi.status() == WL_NO_SHIELD)
+  {
+    Serial.println(F("WiFi shield not present"));
     // don't continue
     while (true);
   }
 
   //Configure the static IP address
   if (groupNumber)
-    WiFi.config(IPAddress(192,168,0,groupNumber));
-  
-  if (APMode) { //Host a WiFi network
-    Serial.print("Creating access point named: ");
+    WiFi.config(IPAddress(192,168,0,groupNumber+1));
+
+  // attempt to connect to WiFi network
+  while ( status != WL_CONNECTED)
+  {
+    //delay(500);
+    Serial.print(F("Connecting to WPA SSID: "));
     Serial.println(ssid);
-
-    // Create open network.
-    status = WiFi.beginAP(ssid);
-    if (status != WL_AP_LISTENING) {
-      Serial.println("Creating access point failed");
-      while (true);
-    }
-
-  } else {  //Connect to exisiting network
+    // Connect to WPA/WPA2 network
     status = WiFi.begin(ssid, pass);
-    while ( status != WL_CONNECTED) {
-      Serial.print("Attempting to connect to Network named: ");
-      Serial.println(ssid);                   // print the network name (SSID);
-      delay(1000);
-    }
-
   }
 
-  // you're connected now, so print out the status
-  printWiFiStatus();
+  //Register the callbacks to respond to HTTP requests
+  server.on(F("/"), handleRoot);
+  server.on(F("/on"), ledON);
+  server.on(F("/off"), ledOFF);
 
-  // start the web server on port 80
+  server.onNotFound(handleNotFound);
+  
   server.begin();
-
-}
-
-
-void loop() {
   
-  //Check for status change
-  if (status != WiFi.status()) {
-    status = WiFi.status();
-
-    //Check for new AP connection
-    if (status == WL_AP_CONNECTED) {
-      byte remoteMac[6];
-      Serial.print("Device connected to AP, MAC address: ");
-      WiFi.APClientMacAddress(remoteMac);
-      printMacAddress(remoteMac);
-    } else if (status == WL_AP_LISTENING) {
-      Serial.println("Waiting for connection to AP");
-    }
-  }
-  
-
-  WiFiClient client = server.available();   // listen for incoming clients
-
-  if (client) {                             // if you get a client,
-    Serial.println("new client");           // print a message out the serial port
-    String currentLine = "";                // make a String to hold incoming data from the client
-    while (client.connected()) {            // loop while the client's connected
-      if (client.available()) {             // if there's bytes to read from the client,
-        char c = client.read();             // read a byte, then
-        Serial.write(c);                    // print it out the serial monitor
-
-
-        if (c == '\n') {                    // Is the line complete?
-
-          // if the current line is blank, you got two newline characters in a row.
-          // that's the end of the client HTTP request, so send a response:
-          if (currentLine.length() == 0) {
-            // HTTP headers always start with a response code (e.g. HTTP/1.1 200 OK)
-            // and a content-type so the client knows what's coming, then a blank line:
-            client.println("HTTP/1.1 200 OK");
-            client.println("Content-type:text/html");
-            client.println();
-
-            // the content of the HTTP response follows the header:
-            client.print("Click <a href=\"/H\">here</a> turn the LED on<br>");
-            client.print("Click <a href=\"/L\">here</a> turn the LED off<br>");
-
-            // The HTTP response ends with another blank line:
-            client.println();
-            Serial.println("Sent page");
-            // break out of the while loop:
-            break;
-          }
-
-          // Other lines have information that might be useful
-          else {
-            // Check to see if the client request was "GET /H" or "GET /L":
-            if (currentLine.startsWith("GET /H")) {
-              digitalWrite(led, HIGH);               // GET /H turns the LED on
-            }
-            if (currentLine.startsWith("GET /L")) {
-              digitalWrite(led, LOW);                // GET /L turns the LED off
-            }
-          }
-
-          currentLine = ""; //Clear the string ready for the next line
-        }
-        else if (c != '\r') {    // if you got anything else but a line end,
-          currentLine += c;      // add it to the end of the currentLine
-        }
-
-      }
-    }
-    // close the connection:
-    client.stop();
-    Serial.println("client disconnected");
-  }
+  Serial.print(F("HTTP server started @ "));
+  Serial.println(static_cast<IPAddress>(WiFi.localIP()));
 }
 
-void printWiFiStatus() {
-  // print the SSID of the network you're attached to:
-  Serial.print("SSID: ");
-  Serial.println(WiFi.SSID());
-
-  // print your WiFi shield's IP address:
-  IPAddress ip = WiFi.localIP();
-  Serial.print("IP Address: ");
-  Serial.println(ip);
-
-  // print the received signal strength:
-  long rssi = WiFi.RSSI();
-  Serial.print("signal strength (RSSI):");
-  Serial.print(rssi);
-  Serial.println(" dBm");
-  // print where to go in a browser:
-  Serial.print("To see this page in action, open a browser to http://");
-  Serial.println(ip);
-
-}
-
-void printMacAddress(byte mac[]) {
-  for (int i = 5; i >= 0; i--) {
-    if (mac[i] < 16) {
-      Serial.print("0");
-    }
-    Serial.print(mac[i], HEX);
-    if (i > 0) {
-      Serial.print(":");
-    }
-  }
-  Serial.println();
+//Call the server polling function in the main loop
+void loop()
+{
+  server.handleClient();
 }
