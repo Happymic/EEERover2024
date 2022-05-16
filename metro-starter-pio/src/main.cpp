@@ -9,9 +9,9 @@
 
 const char ssid[] = "EEERover";     //  your network SSID (name)
 const char pass[] = "exhibition";   // your network password
-const IPAddress ip(192,168,0,0);    // unique ip address to access this module - MODIFY THIS
 const bool APMode = false;          // Option to host a WiFi network
 const int led =  LED_BUILTIN;
+const int groupNumber = 99;         // Set your group number and IP address
 
 void printWiFiStatus();
 void printMacAddress(byte mac[]);
@@ -26,7 +26,7 @@ void setup() {
     ; // wait for serial port to connect. Needed for native USB port only
   }
 
-  Serial.println("Access Point Web Server");
+  Serial.println("EEERover Web Server");
 
   pinMode(led, OUTPUT);      // set the LED pin mode
 
@@ -37,7 +37,8 @@ void setup() {
     while (true);
   }
 
-  WiFi.config(ip);
+  //Configure the static IP address
+  WiFi.config(IPAddress(192,168,0,groupNumber));
   
   if (APMode) { //Host a WiFi network
     Serial.print("Creating access point named: ");
@@ -65,6 +66,7 @@ void setup() {
 
   // start the web server on port 80
   server.begin();
+
 }
 
 
@@ -95,7 +97,9 @@ void loop() {
       if (client.available()) {             // if there's bytes to read from the client,
         char c = client.read();             // read a byte, then
         Serial.write(c);                    // print it out the serial monitor
-        if (c == '\n') {                    // if the byte is a newline character
+
+
+        if (c == '\n') {                    // Is the line complete?
 
           // if the current line is blank, you got two newline characters in a row.
           // that's the end of the client HTTP request, so send a response:
@@ -112,24 +116,28 @@ void loop() {
 
             // The HTTP response ends with another blank line:
             client.println();
+            Serial.println("Sent page");
             // break out of the while loop:
             break;
           }
-          else {      // if you got a newline, then clear currentLine:
-            currentLine = "";
+
+          // Other lines have information that might be useful
+          else {
+            // Check to see if the client request was "GET /H" or "GET /L":
+            if (currentLine.startsWith("GET /H")) {
+              digitalWrite(led, HIGH);               // GET /H turns the LED on
+            }
+            if (currentLine.startsWith("GET /L")) {
+              digitalWrite(led, LOW);                // GET /L turns the LED off
+            }
           }
+
+          currentLine = ""; //Clear the string ready for the next line
         }
-        else if (c != '\r') {    // if you got anything else but a carriage return character,
+        else if (c != '\r') {    // if you got anything else but a line end,
           currentLine += c;      // add it to the end of the currentLine
         }
 
-        // Check to see if the client request was "GET /H" or "GET /L":
-        if (currentLine.endsWith("GET /H")) {
-          digitalWrite(led, HIGH);               // GET /H turns the LED on
-        }
-        if (currentLine.endsWith("GET /L")) {
-          digitalWrite(led, LOW);                // GET /L turns the LED off
-        }
       }
     }
     // close the connection:
