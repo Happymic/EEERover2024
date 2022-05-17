@@ -55,9 +55,11 @@ const char webpage[] = \
 <body>\
 <button class=\"btn\" onclick=\"ledOn()\">LED On</button>\
 <button class=\"btn\" onclick=\"ledOff()\">LED Off</button>\
+<br>LED STATE: <div id=\"state\">UNKNOWN</div>\
 </body>\
 <script>\
 var xhttp = new XMLHttpRequest();\
+xhttp.onreadystatechange = function() {if (this.readyState == 4 && this.status == 200) {document.getElementById(\"state\").innerHTML = this.responseText;}};\
 function ledOn() {xhttp.open(\"GET\", \"/on\"); xhttp.send();}\
 function ledOff() {xhttp.open(\"GET\", \"/off\"); xhttp.send();}\
 </script></html>";
@@ -74,14 +76,14 @@ void handleRoot()
 void ledON()
 {
   digitalWrite(LED_BUILTIN,1);
-  server.send(200, F("text/plain"), F("OK"));
+  server.send(200, F("text/plain"), F("ON"));
 }
 
 //Switch LED on and acknowledge
 void ledOFF()
 {
   digitalWrite(LED_BUILTIN,0);
-  server.send(200, F("text/plain"), F("OK"));
+  server.send(200, F("text/plain"), F("OFF"));
 }
 
 //Generate a 404 response with details of the failed request
@@ -108,8 +110,11 @@ void setup()
   digitalWrite(LED_BUILTIN, 0);
 
   Serial.begin(9600);
-  //Wait for the serial connection before proceeding. Remove this if the USB host won't be attached
-  while (!Serial);  
+
+  //Wait 10s for the serial connection before proceeding
+  //This ensures you can see messages from startup() on the monitor
+  //Remove this for faster startup when the USB host isn't attached
+  while (!Serial && millis() < 10000);  
 
   Serial.println(F("\nStarting Web Server"));
 
