@@ -1,8 +1,8 @@
 # EEERover starter code
 
 This project is an example of setting up WiFi communication with the Metro M0 Express module using HTTP.
-The microcontroller connects to a WiFi network and acts as a simple web server, returning a very basic web page when it receives an HTTP request.
-It also acts on certain path strings in the HTTP request to switch an LED on and off when the client clicks buttons on the webpage.
+The microcontroller connects to a WiFi network and acts as a simple web server, returning a basic web page when it receives an HTTP request.
+It also acts on certain paths in the HTTP request to switch an LED on and off when the client clicks buttons on the webpage.
 
 ## Building the project
 
@@ -27,11 +27,13 @@ Each HTTP request has a URI, which is the path of the resource that is requested
  - `\on` A request to turn the LED on, e.g. `http://192.168.0.10/on`
  - `\off` A request to turn the LED off, e.g. `http://192.168.0.10/off`
 
-A different function is called when each request is received. A request to the root path returns the html code for the user interface. `\on` and `\off` set the LED and then return 'OK'.
+A different function is called when each request is received. A request to the root path returns the html code for the user interface. `\on` and `\off` set the LED and the reponse is the state of the LED, either `ON` or `OFF`.
 
 ### The web interface
 
-The webpage built into the starter code shows how buttons can be used to send HTTP requests. `<button>` tags are used to define two buttons, which are formatted with some basic styling defined in the `<style>` section. Each button triggers a JavaScript function that is defined in the `<script>` section. A `XMLHttpRequest` object is used to send the HTML requests with its `send()` and `open()` methods.
+The webpage built into the starter code is a basic user interface based on JavaScript and HTTP requests. `<button>` tags are used to define two buttons, which are formatted with some basic styling defined in the `<style>` section. Each button triggers a JavaScript function that is defined in the `<script>` section. In these functions, a `XMLHttpRequest` object is used to send a HTTP request with its `send()` and `open()` methods. 
+
+An inline function is assigned to `xhttp.onreadystatechange`, which is called whenever a response is received to a HTTP request. The function updates the LED state text displayed on the page with the contents of the HTTP response. Remember that all the JavaScript functions are executed on the client web browser, not on the microcontroller module.
 
 ## Next steps
 

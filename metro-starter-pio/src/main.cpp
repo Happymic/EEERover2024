@@ -55,7 +55,7 @@ const char webpage[] = \
 <body>\
 <button class=\"btn\" onclick=\"ledOn()\">LED On</button>\
 <button class=\"btn\" onclick=\"ledOff()\">LED Off</button>\
-<br>LED STATE: <div id=\"state\">UNKNOWN</div>\
+<br>LED STATE: <span id=\"state\">OFF</span>\
 </body>\
 <script>\
 var xhttp = new XMLHttpRequest();\
