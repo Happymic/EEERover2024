@@ -41,7 +41,7 @@ Arduino is a popular platform for prototyping and you will find a lot of informa
 			
 ### Starter code
 
-This repository contains microcontroller code to get you started. You can continue to use Arduino IDE as in the lab skills work, or you can develop with Visual Studio Code and Platformio.
+This repository contains [microcontroller code](../metro-starter-arduino/README.md) to get you started. You can continue to use Arduino IDE as in the lab skills work, or you can develop with Visual Studio Code and Platformio.
 			
  ### Connections and Power
 			
@@ -59,23 +59,14 @@ The Metro board can be powered by USB, the power jack or the EEEBug batteries. T
 
 **Always check these connections before switching on the power. You may damage the microcontroller if you make a mistake**
 			
-If the Metro board is powered by USB or the power jack then 5V power can be taken from the 5V or 3.3V terminals to power your circuits. However, motor power comes directly from the battery so your motors will only work under battery power. The voltage regulators on the Metro board have a limited power rating and they will overheat if you draw too much current.
+You can use the 5V or 3.3V nodes to power your own circuit. It is not recommended to use Vin or Vbatt, since the voltage of these will vary depending on the power source.
 
  - [ ] Confirm motor behaviour under USB power
 			
-![EEERover-Power](https://user-images.githubusercontent.com/4660308/168489307-1d7e8a6e-539c-4165-be83-0eccff83b9ae.svg)
+![EEERover-Power](EEERover-power.svg)
 
-*A simplified diagram showing the connection of the Metro board power supply, battery and motor supply*
- - [ ] Update to show EEEBug PCB v3
+*A simplified diagram showing the connection of the Metro M0 Express and EEERover PCB power supplies*
  - [ ] Scaling
-			 
- ### WiFi
-
-The demo code is configured to connect to a stand-alone WiFi network `EEERover` that is set up in the lab. Before uploading the demonstration code, change the IP address defined in the code to the value `192.168.0.n`, where `n` is the number of your Metro board written on a label on the board. Once you have uploaded the code, connect to the EEERover network with a laptop or other device  (password `exhibition`) and use a web browser to access your IP address, for example http://192.168.0.1/
-
- - [ ] Enable WiFi AP
-
-You will see in the code how you can define which WiFi network the Metro board will connect to. You can change it to connect to other networks, but it is not possible to connect to networks secured with WPA2-enterprise, including the Imperial College network. It is also possible for the board to host its own WiFi network --- see the example in WiFi101 → AP_SimpleWebServer. Please connect via the EEERover network if you are in the lab because communication over many different WiFi networks will cause interference and unreliable connections.
 			
  ### Exorock mineral simulator
       
@@ -87,9 +78,9 @@ You will see in the code how you can define which WiFi network the Metro board w
 					
 The Exorock is configured by setting a group of DIP switches on the PCB. A push button is used to turn it on and off, and an LED indicates when it is active. A flow chart depicting the operation of the Exolizard is shown below. From standby (inactive) mode, press the button to turn on and observe the LED flahses to determine whether the battery has sufficient charge. After the battery display sequence is complete the Exolizard begins emitting signals according to the mode set up on the DIP switches. The LED flashes a code at intervals to confirm the mode selection and indicate operation.
 
- ![exorock-flow](https://user-images.githubusercontent.com/4660308/168096296-662e0d1e-3798-4e09-81d1-5d50be0c499b.svg)
+ ![exorock-flow](exorock-flow.svg)
   
- - [ ] Scaling, shows incorrect modes
+ - [ ] Scaling
 		
 Pushing the button during operation will reset the Exolizard --- this is necessary to change the operation mode. A second press soon afterwards will turn the device off. If the Exorock is left operating for five minutes it will automatically power off to preserve the battery.
 			
