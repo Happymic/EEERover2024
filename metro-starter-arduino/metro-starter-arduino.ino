@@ -132,7 +132,7 @@ void setup()
   // attempt to connect to WiFi network
   Serial.print(F("Connecting to WPA SSID: "));
   Serial.println(ssid);
-  while (!WiFi.begin(ssid, pass))
+  while (WiFi.begin(ssid, pass) != WL_CONNECTED)
   {
     delay(500);
     Serial.print('.');
