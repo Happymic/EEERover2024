@@ -6,4 +6,4 @@ Build the project using the Build option in the Platformio sidebar or the ✓ ic
 
 Run the code by choosing 'Upload' or →. View the serial output using 'monitor' or 🔌. A terminal will open to show the serial output from the microcontroller.
 
-Refer to the documentation for the (Arduino IDE version)[metro-starter-arduino/README.md] of the starter code for more information.
+Refer to the documentation for the [Arduino IDE version](metro-starter-arduino/README.md) of the starter code for more information.
