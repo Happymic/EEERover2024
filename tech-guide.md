@@ -26,10 +26,11 @@
     
 ### Motor Driver
 
- ![H-Bridge](https://user-images.githubusercontent.com/4660308/168389450-4aef4f97-12a5-4336-b253-555195959f80.svg)
- - [ ] Fix scaling of this image
+The project kit contains a motor driver module to make it easy to control power to the motors.
 
-The motor driver is a two-channel integrated \emph{H Bridge} with decode logic, illustrated above. One channel controls the left motor and one channel controls the right motor. Each channel has two digital inputs, DIR and PWM, which are available on J2 of the EEEBug PCB (refer to the circuit diagram in the appendix of the EEEBug instructions). The digital inputs are decoded and used to control four \emph{MOSFETs}, which are low-impedance switching transistors. The inputs can be connected directly to digital outputs on the Metro board. DIR controls the motor direction and the motor speed can be controlled by applying a rectangular waveform to the PWM input and varying the duty cycle. The motor driver plugs into J4 and J5 of the EEEBug PCB.
+ <img src="https://user-images.githubusercontent.com/4660308/168389450-4aef4f97-12a5-4336-b253-555195959f80.svg" alt="drawing" width="400"/>
+
+The motor driver is a two-channel integrated *H Bridge* with decode logic, illustrated above. One channel controls the left motor and one channel controls the right motor. Each channel has two digital inputs, DIR and PWM. The digital inputs are decoded and used to control four MOSFETs, which are low-impedance switching transistors. The inputs can be connected directly to digital outputs on the Metro board. DIR controls the motor direction and the motor speed can be controlled by applying a rectangular waveform to the PWM input and varying the duty cycle - use `analogueWrite()` in the Arduino API to generate a PWM signal. The motor driver module plugs into the motor power connectors on the EEEBug PCB.
 			
 ### Metro M0 board
 
