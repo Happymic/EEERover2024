@@ -27,7 +27,7 @@ Each HTTP request has a URI, which is the path of the resource that is requested
  - `/on` A request to turn the LED on, e.g. `http://192.168.0.10/on`
  - `/off` A request to turn the LED off, e.g. `http://192.168.0.10/off`
 
-A different function is called when each request is received. A request to the root path returns the html code for the user interface. `\on` and `\off` set the LED and the reponse is the state of the LED, either `ON` or `OFF`.
+A different function is called when each request is received. A request to the root path returns the html code for the user interface. `/on` and `/off` set the LED and the reponse is the state of the LED, either `ON` or `OFF`.
 
 ### The web interface
 
