@@ -33,7 +33,7 @@ A different function is called when each request is received. A request to the r
 
 The webpage built into the starter code is a basic user interface based on JavaScript and HTTP requests. `<button>` tags are used to define two buttons, which are formatted with some basic styling defined in the `<style>` section. Each button triggers a JavaScript function that is defined in the `<script>` section. In these functions, a `XMLHttpRequest` object is used to send a HTTP request with its `send()` and `open()` methods. 
 
-An inline function is assigned to `xhttp.onreadystatechange`, which is called whenever a response is received to a HTTP request. The function updates the LED state text displayed on the page with the contents of the HTTP response. Remember that all the JavaScript functions are executed on the client web browser, not on the microcontroller module.
+An inline function is assigned to `xhttp.onreadystatechange`, which is called whenever a response is received to a HTTP request. The function updates the LED state text displayed on the page with the contents of the HTTP response. Remember that all the JavaScript functions are executed on the client web browser, not on the microcontroller module. You could host or store the webpage somewhere else entirely - you would just need to modify the URLs for the on and off HTTP requests to include the full hostname (IP address) of the microcontroller.
 
 ## Next steps
 
