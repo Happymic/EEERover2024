@@ -28,7 +28,7 @@
 
 The project kit contains a motor driver module to make it easy to control power to the motors.
 
- <img src="https://user-images.githubusercontent.com/4660308/168389450-4aef4f97-12a5-4336-b253-555195959f80.svg" alt="drawing" width="400"/>
+<img src="https://user-images.githubusercontent.com/4660308/168389450-4aef4f97-12a5-4336-b253-555195959f80.svg" alt="Circuit diagram of an H-bridge with logic decoder" width="400"/>
 
 The motor driver is a two-channel integrated *H Bridge* with decode logic, illustrated above. One channel controls the left motor and one channel controls the right motor. Each channel has two digital inputs, DIR and PWM. The digital inputs are decoded and used to control four MOSFETs, which are low-impedance switching transistors. The inputs can be connected directly to digital outputs on the Metro board. DIR controls the motor direction and the motor speed can be controlled by applying a rectangular waveform to the PWM input and varying the duty cycle - use `analogueWrite()` in the Arduino API to generate a PWM signal. The motor driver module plugs into the motor power connectors on the EEEBug PCB.
 			
@@ -60,28 +60,21 @@ The Metro board can be powered by USB, the power jack or the EEEBug batteries. T
 
 **Always check these connections before switching on the power. You may damage the microcontroller if you make a mistake**
 			
-You can use the 5V or 3.3V nodes to power your own circuit. It is not recommended to use Vin or Vbatt, since the voltage of these will vary depending on the power source.
-
- - [ ] Confirm motor behaviour under USB power
+You can use the 5V or 3.3V nodes to power your own circuit. It is not recommended to use Vin or Vbatt, since the voltage of these will vary depending on the power source. The motors will run slowly if the battery is not available.
 			
-![EEERover-Power](EEERover-power.svg)
+<img src="EEERover-power.svg" alt="Simplified circuit diagram of the Metro M0 Express and EEERover PCB power supplies" width="600"/>
 
 *A simplified diagram showing the connection of the Metro M0 Express and EEERover PCB power supplies*
- - [ ] Scaling
 			
  ### Exorock mineral simulator
       
  Your prototype will be developed and tested using Exorock simulators: electronic devices which can replicate the properties of the minerals that you are designign your rover to search for. An Exorock is  included in your kit to aid development.
  
- ![exorock](https://user-images.githubusercontent.com/4660308/168095519-44b9d1c9-ec1a-468f-af53-7b428f99cf31.jpg)
- 
- - [ ] Scaling
+<img src="https://user-images.githubusercontent.com/4660308/168095519-44b9d1c9-ec1a-468f-af53-7b428f99cf31.jpg" alt="Photograph of PCB inside Exorock" width="600"/>
 					
-The Exorock is configured by setting a group of DIP switches on the PCB. A push button is used to turn it on and off, and an LED indicates when it is active. A flow chart depicting the operation of the Exolizard is shown below. From standby (inactive) mode, press the button to turn on and observe the LED flahses to determine whether the battery has sufficient charge. After the battery display sequence is complete the Exolizard begins emitting signals according to the mode set up on the DIP switches. The LED flashes a code at intervals to confirm the mode selection and indicate operation.
+The Exorock is configured by setting a group of DIP switches on the PCB. A push button is used to turn it on and off, and an LED indicates when it is active. A flow chart depicting the operation of the Exolizard is shown below. From standby (inactive) mode, press the button to turn on and observe the LED flashes to determine whether the battery has sufficient charge. After the battery display sequence is complete the Exolizard begins emitting signals according to the mode set up on the DIP switches. The LED flashes a code at intervals to confirm the mode selection and indicate operation.
 
- ![exorock-flow](exorock-flow.svg)
-  
- - [ ] Scaling
+<img src="exorock-flow.svg" alt="Simplified circuit diagram of the Metro M0 Express and EEERover PCB power supplies" width="600"/>
 		
 Pushing the button during operation will reset the Exolizard --- this is necessary to change the operation mode. A second press soon afterwards will turn the device off. If the Exorock is left operating for five minutes it will automatically power off to preserve the battery.
 			

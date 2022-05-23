@@ -23,17 +23,17 @@ HTTP is the protocol used to access websites and it is used here because it allo
 
 The server is configured in the `setup()` function using calls to `server.on()` to define what happens when requests are received.
 Each HTTP request has a URI, which is the path of the resource that is requested. The server responds to three different URIs:
- - `\` The root path, e.g. `http://192.168.0.10/`
- - `\on` A request to turn the LED on, e.g. `http://192.168.0.10/on`
- - `\off` A request to turn the LED off, e.g. `http://192.168.0.10/off`
+ - `/` The root path, e.g. `http://192.168.0.10/`
+ - `/on` A request to turn the LED on, e.g. `http://192.168.0.10/on`
+ - `/off` A request to turn the LED off, e.g. `http://192.168.0.10/off`
 
-A different function is called when each request is received. A request to the root path returns the html code for the user interface. `\on` and `\off` set the LED and the reponse is the state of the LED, either `ON` or `OFF`.
+A different function is called when each request is received. A request to the root path returns the html code for the user interface. `/on` and `/off` set the LED and the reponse is the state of the LED, either `ON` or `OFF`.
 
 ### The web interface
 
 The webpage built into the starter code is a basic user interface based on JavaScript and HTTP requests. `<button>` tags are used to define two buttons, which are formatted with some basic styling defined in the `<style>` section. Each button triggers a JavaScript function that is defined in the `<script>` section. In these functions, a `XMLHttpRequest` object is used to send a HTTP request with its `send()` and `open()` methods. 
 
-An inline function is assigned to `xhttp.onreadystatechange`, which is called whenever a response is received to a HTTP request. The function updates the LED state text displayed on the page with the contents of the HTTP response. Remember that all the JavaScript functions are executed on the client web browser, not on the microcontroller module.
+An inline function is assigned to `xhttp.onreadystatechange`, which is called whenever a response is received to a HTTP request. The function updates the LED state text displayed on the page with the contents of the HTTP response. Remember that all the JavaScript functions are executed on the client web browser, not on the microcontroller module. You could host or store the webpage somewhere else entirely - you would just need to modify the URLs for the on and off HTTP requests to include the full hostname (IP address) of the microcontroller.
 
 ## Next steps
 
