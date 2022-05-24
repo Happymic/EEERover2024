@@ -6,7 +6,7 @@ It also acts on certain paths in the HTTP request to switch an LED on and off wh
 
 ## Building the project
 
-Additional libraries are needed to use Arduino IDE with the Metro M0 board and WiFi module. [Follow the instructions from Adafruit](https://learn.adafruit.com/adafruit-metro-m0-express/arduino-ide-setup) to add support for the Metro M0 Express board in Arduino IDE.
+Additional libraries are needed to use Arduino IDE with the Metro M0 board and WiFi module. [Follow the instructions from Adafruit](https://learn.adafruit.com/adafruit-metro-m0-express/arduino-ide-setup) to add support for the Metro M0 Express board in Arduino IDE. Alternatively, you can build the project in [Visual Studio Code using PlatformIO](../metro-starter-pio/README.md).
 			
 The WiFi communication functions are provided by the WiFiWebServer library, which also must be installed with the Library Manager. The library installs its own set of example sketches and has an [API reference](https://github.com/khoih-prog/WiFiWebServer). The demonstration code in this repository is based on these examples.
 
@@ -14,7 +14,7 @@ The WiFi communication functions are provided by the WiFiWebServer library, whic
 
 The code is configured to connect to the EEERover network in the lab. You can give a different WiFi network and password, such as a mobile hotspot, by changing the appropriate lines in the code. You won't be able to connect to the College WiFi network, which uses a login. When the code starts it reports its IP Address on the serial monitor. You can connect to the microcontroller from a computer on the same WiFi network by typing this address into a web browser.
 
-You may need to connect to the microcontroller when it is not connected to a host computer, so you won't see the message reporting the IP address. You can fix the IP address to a certain value by setting `groupNumber` to your group number. You can only do this on the EEERover network because it has been configured to allow a certain range of static IPs.
+You may need to connect to the microcontroller when it is not connected with a USB cable, so you won't see the message reporting the IP address. You can fix the IP address to a certain value by setting `groupNumber` to your group number. The IP address will be `192.168.0.n+1`. You can only do this on the EEERover network because it has been configured to allow a certain range of static IPs.
 
 ## HTTP server
 
