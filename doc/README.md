@@ -115,8 +115,8 @@ The table of mineral types from the design brief is:
 | ------- | ---------- | ---------- |
 | Gaborium | 61kHz radio modulated at 151Hz | Acoustic signal at 40.0kHz |
 | Lathwaite | 61kHz radio modulated at 239Hz | None |
-| Adamantine | 89kHz radio modulated at 151Hz | Magnetic field up |
-| Xirang | 89kHz radio modulated at 239Hz | Magnetic field down |
+| Adamantine | 89kHz radio modulated at 151Hz | Magnetic field |
+| Xirang | 89kHz radio modulated at 239Hz | Magnetic field |
 | Thiotimoline | Infrared pulses at 353Hz | None |
 | Netherite | Infrared pulses at 571Hz | Acoustic signal at 40.0kHz |
 			
