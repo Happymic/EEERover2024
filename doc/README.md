@@ -30,7 +30,7 @@ The project kit contains a motor driver module to make it easy to control power 
 
 <img src="https://user-images.githubusercontent.com/4660308/168389450-4aef4f97-12a5-4336-b253-555195959f80.svg" alt="Circuit diagram of an H-bridge with logic decoder" width="400"/>
 
-The motor driver is a two-channel integrated *H Bridge* with decode logic, illustrated above. One channel controls the left motor and one channel controls the right motor. Each channel has two digital inputs, DIR and PWM. The digital inputs are decoded and used to control four MOSFETs, which are low-impedance switching transistors. The inputs can be connected directly to digital outputs on the Metro board. DIR controls the motor direction and the motor speed can be controlled by applying a rectangular waveform to the PWM input and varying the duty cycle - use `analogueWrite()` in the Arduino API to generate a PWM signal. The motor driver module plugs into the motor power connectors on the EEEBug PCB.
+The motor driver is a two-channel integrated *H Bridge* with decode logic, illustrated above. One channel controls the left motor and one channel controls the right motor. Each channel has two digital inputs, DIR and PWM. The digital inputs are decoded and used to control four MOSFETs, which are low-impedance switching transistors. The inputs can be connected directly to digital outputs on the Metro board. DIR controls the motor direction and the motor speed can be controlled by applying a rectangular waveform to the PWM input and varying the duty cycle - use `analogWrite()` in the Arduino API to generate a PWM signal. The motor driver module plugs into the motor power connectors on the EEEBug PCB.
 			
 ### Metro M0 board
 
@@ -99,7 +99,7 @@ Please be aware of the following rules and common pitfalls when ordering compone
  - You need to maintain the goodwill of the stores staff to order parts for this project and future projects. Do not chase the staff for your order until one week has passed from placing the order. It is your responsibility to check parts for suitability and availability.
 			
  ### Making a new chassis
- This repository contains design files for the EEEBug chassis. You can design your own version using this as a template. You will see that cut lines are drawn in red and engrave lines are drawn in blue. Laser cutting removes a tapering width of material known as a \emph{kerf}, which for 3mm acrylic is typically 0.1mm at the bottom of the material and 0.3--0.4mm at the top. Hence, cut edges are not vertical, external dimensions will be slightly smaller than drawn and internal dimensions slightly larger than drawn.
+ This repository contains design files for the EEEBug chassis. You can design your own version using this as a template. You will see that cut lines are drawn in red and engrave lines are drawn in blue. Laser cutting removes a tapering width of material known as a *kerf*, which for 3mm acrylic is typically 0.1mm at the bottom of the material and 0.3--0.4mm at the top. Hence, cut edges are not vertical, external dimensions will be slightly smaller than drawn and internal dimensions slightly larger than drawn.
 
 Designs for laser cutting must be submitted in PDF format. Multiple parts can be placed on the drawing as long as they fit into an area of 600mm x 300mm. Add engraving to identify your group as the owner. You are strongly recommended to check your design by printing it on paper first - the scaling will be identical as long as the PDF file is printed at 100% scaling.
 
