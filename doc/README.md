@@ -78,7 +78,9 @@ The Exorock is configured by setting a group of DIP switches on the PCB. A push 
 		
 Pushing the button during operation will reset the Exolizard --- this is necessary to change the operation mode. A second press soon afterwards will turn the device off. If the Exorock is left operating for five minutes it will automatically power off to preserve the battery.
 			
-The Exorock cannot simulate the magnetic property in an readily-configurable manner so you are provided with a small magnet to test this functionality. In the demo, magnets will be placed inside the Exorock approximately 10mm below the highest point on its top.
+The Exorock cannot simulate the magnetic property in an readily-configurable manner so you are provided with a small magnet to test this functionality. In the demo, magnets will be placed inside the Exorock approximately 10mm below the highest point on its top. The polarity of the magent in your kit depends on the colour of the disc:
+
+<img src="https://user-images.githubusercontent.com/4660308/170473263-a0c64335-e151-4071-b97a-f077de7aaca5.jpg" alt="With the disc flat on a surface, the magnetic field is orientated up from a blue disc and down with an orange disc" width="600"/>
 			
 The emitted infrared and ultrasonic signals are strongest above the exorock. The radio signal is emmitted from a coil antenna in the plane of the PCB.	
 			
@@ -115,8 +117,8 @@ The table of mineral types from the design brief is:
 | ------- | ---------- | ---------- |
 | Gaborium | 61kHz radio modulated at 151Hz | Acoustic signal at 40.0kHz |
 | Lathwaite | 61kHz radio modulated at 239Hz | None |
-| Adamantine | 89kHz radio modulated at 151Hz | Magnetic field |
-| Xirang | 89kHz radio modulated at 239Hz | Magnetic field |
+| Adamantine | 89kHz radio modulated at 151Hz | Magnetic field up |
+| Xirang | 89kHz radio modulated at 239Hz | Magnetic field down |
 | Thiotimoline | Infrared pulses at 353Hz | None |
 | Netherite | Infrared pulses at 571Hz | Acoustic signal at 40.0kHz |
 			
