@@ -35,7 +35,7 @@ The quality of the design will be assessed against the following criteria:
 The aliens communicate with radio waves and each alien will tell you its name.
 Communication uses a carrier frequency of 89kHz, modulated with two-level *amplitude-shift keying* (on off modulation).
 The name is encoded using ASCII character codes in UART packets with 1 start bit and 1 stop bit.
-The data rate is 600 bits per second.
+The data rate is 600 bits per second and each alien's name is four characters long, including an initial `#` symbol.
 	
 - [ ] Add diagram of modulation
 	
