@@ -3,14 +3,7 @@
 	
 ## Introduction
 	
-		\begin{figure}
-			\centering
-			\includegraphics[width=\linewidth]{moon.jpg}
-			\caption{The moon}
-			\label{f:moon}
-		\end{figure}
-
-Most of the Summer Term study time is allocated to the Engineering Group Design Project, which is one of the six modules that make up your first year of study.
+The Engineering Group Design Project is one of the six modules that make up your first year of study.
 It brings together theoretical and practical content from your lectures and labs with important industrial skills relating to product design, project management and team working.
 		
 You will work in tutorial groups of 5–7 people to complete the project.
@@ -18,8 +11,10 @@ It will be assessed with an interim interview, a final report, and a demo.
 		
 ## Brief
 
-You are requested to design a remotely-controlled rover that can explore a remote planet and survey the creatures that live there.
+You are requested to design a remotely-controlled rover that can explore a remote planet and survey the alien creatures that live there.
 Using a variety of electromagnetic signals, you must find out the name, age and magnetic polarity of each alien.
+
+- [ ] Add photo of aliens on arena
   
 A prototype of the design must be built and tested in an artificial environment in the lab.
 The quality of the design will be assessed against the following criteria:
@@ -32,12 +27,12 @@ The quality of the design will be assessed against the following criteria:
 ## Characteristics of the aliens
 ### Name
 
-The aliens communicate with radio waves and each alien will tell you its name.
+The aliens communicate by radio and each alien will tell you its name.
 Communication uses a carrier frequency of 89kHz, modulated with two-level *amplitude-shift keying* (on off modulation).
 The name is encoded using ASCII character codes in UART packets with 1 start bit and 1 stop bit.
 The data rate is 600 bits per second and each alien's name is four characters long, including an initial `#` symbol.
 	
-- [ ] Add diagram of modulation
+![Alien name encoded in radio frequency](name-encoding.png)
 	
 ### Age
 
@@ -55,22 +50,38 @@ Some aliens have no magnetic field at all.
 	
 ## Deliverables and assessments
 	
-The project will be assessed with a report, a show-and-tell group interview and a head-to-head competition.
+The project will be assessed with an interim interview, a final report and a demo with head-to-head competition.
+
+### Interim Presentation
+
+**Date of assessment:  1 June 2023**
+
+The interim presentation is an opportunity to show your progress mid-way through the project.
+You should prepare a presentation showing your high-level design, research and technical progress so far.
+You should also present a plan for the remaining work to complete the project.
+
+Marks weighting: 20%
 	
 ### Report
-			\textbf{Date of submission:  19 June 2022}\\
-			The report is a formal documentation of all the technical and non-technical work you have done on the project. By this time all your design decisions will have been made and you will be able to document the performance of various aspects of your prototype. You should also have a clear plan for any work outstanding before you can complete the demonstration. One team member should act as overall editor to ensure that the report is consistent in style and content.
-			Marks awarded: 50\%
 
-### Group Interview
-			\textbf{Date of assessment:  24 June 2022}\\
-			The group interview will take place immediately before the demo and it is an opportunity for you to show your examiner the details of your implementation and answer their technical questions.\\
-			Marks awarded: 30\%
+**Date of submission:  15 June 2023**
+
+The report is a formal documentation of all the technical and non-technical work you have done on the project.
+The report should justify all your design decisions and include test results of various aspects of your prototype.
+One team member should act as overall editor to ensure that the report is consistent in style and content.
+
+Marks weighting: 40%
 			
 ### Demo
-			\textbf{Date of assessment:  24 June 2022}\\
-			The demo will take place as a contest between three or four rovers in a test arena. You must try to identify all the rocks in the fastest time without colliding with the obstacles or other rovers.\\
-			Marks awarded: 20\%
+
+**Date of assessment:  20 June 2023**
+
+The demo is your opportunity to present your completed project.
+There are two parts to the demo:
+1. An assessment of your rover on the lab bench, where your examiner will ask to see different functional aspects and assess your theoretical understanding of the implementation
+2. A test of your rover on the demonstration arena, where multiple groups will compete to survey all the aliens in the quickest time.
+
+Marks weighting: 40%
 	
 ## Getting started
 				
