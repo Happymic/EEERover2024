@@ -110,7 +110,14 @@ From standby (inactive) mode, press the button to turn on and observe the LED fl
 After the battery display sequence is complete the alien begins emitting signals according to the mode set up on the DIP switches.
 The LED flashes a code at intervals to confirm the mode selection and indicate operation.
 
-- [ ] Add operation diagram for alien
+![Operation flow chart for alien simulator](operation-alien.png)
+
+In normal operation, the alien transmits its personalised name and pulse continuously — this will be the mode used in the final demonstration.
+Other modes are available to help testing:
+- The alien can transmit a random name and pulse frequency, which will change each time it is restarted.
+- The alien can continuously cycle through all the possible names. In this mode, the pulse is synchronised to the start of each radio transmission, which can be used as an oscilloscope trigger to facilitate testing.
+- The alien can transmit a continuous radio frequency with a sweeping carrier frequency. This can be used to test the frequency response of the receiver circuit.
+
 		
 Pushing the button during operation will reset the alien — this is necessary to change the operation mode.
 A second press soon afterwards will turn the device off.
@@ -168,6 +175,8 @@ The characteristics of aliens from the design brief are:
 ### Name
   
 The alien's name is transmitted as characters encoded with ASCII, framed as UART and modulated with radio frequency.
+
+![Name encoding](name-encoding)
 
 First you will need to convert the radio waves into a signal.
 You can use a tuned coil antenna, which is essentially an air-cored inductor with a reasonably large diameter that you can make by coiling wire.
