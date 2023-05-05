@@ -14,7 +14,7 @@ It will be assessed with an interim interview, a final report, and a demo.
 You are requested to design a remotely-controlled rover that can explore a remote planet and survey the alien creatures that live there.
 Using a variety of electromagnetic signals, you must find out the name, age and magnetic polarity of each alien.
 
-- [ ] Add photo of aliens on arena
+![Aliens in their environment](alien-arena.jpg)
   
 A prototype of the design must be built and tested in an artificial environment in the lab.
 The quality of the design will be assessed against the following criteria:
