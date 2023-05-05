@@ -101,7 +101,7 @@ The motors will run slowly if the battery is not available.
 Your prototype will be developed and tested using alien simulators: electronic devices which can replicate the charcteristics of the real aliens.
 An alien simulator is included in your kit to aid development.
  
-- [ ] Add a photo of alien underside
+![User interface of the alien](alien-config.jpg)
 					
 The alien is configured by setting a group of DIP switches on its internal PCB.
 A push button is used to turn it on and off, and an LED indicates when it is active.
@@ -176,7 +176,7 @@ The characteristics of aliens from the design brief are:
   
 The alien's name is transmitted as characters encoded with ASCII, framed as UART and modulated with radio frequency.
 
-![Name encoding](name-encoding)
+![Name encoding](name-encoding.png)
 
 First you will need to convert the radio waves into a signal.
 You can use a tuned coil antenna, which is essentially an air-cored inductor with a reasonably large diameter that you can make by coiling wire.
