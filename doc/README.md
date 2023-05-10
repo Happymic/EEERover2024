@@ -200,11 +200,18 @@ The two ports can operate at different bit rates.
 ### Age
 The age of the alien is indicated by a pulsing infrared signal.
 You have already made a light sensor as part of the EEEBug and most silicon-based photosensors (such as the EEEBug phototransistor) are just as sensitive to infrared as visible light.
+You will need to measure the pulse frequency of the signal and this can be done with analogue or digital methods.
 
-However, the optical power given by the alien is weaker than the light source you used for the EEEBug so you may need to amplify the output.
+The optical power given by the alien is weaker than the light source you used for the EEEBug so you may need to amplify the output.
 Ambient light will cause interference and this can be filtered out by using a sensor that is only sensitive to the wavelength of the alien emmission (950nm) and by using electronic filters.
 Many sources of electric light have a strong frequency component at 100Hz due to the rectification effect of the 50Hz AC source.
-You will need to measure the pulse frequency of the signal and this can be done with analogue or digital methods.
+
+The frequency range of the pulses is 135–1000Hz, but take care if you remove frequencies above this range.
+The pulse width of the infrared signal is just 50μs and the amplitude that you observe will be reduced if you filter out the high frequency harmonics.
+Low-pass filtering may smooth out the edges of the pulse and make frequency measurement less accurate.
+There can even be a problem with the sensor itself, since all optical sensors have a capacitance that acts to introduce a low-pass filter.
+There may be a trade-off between the speed and the sensitivity of your sensor.
+
 			
 ### Magnetism
 The magnetic field of the alien is static, meaning that it will not induce a current in a coil of wire unless that coil is moving.
