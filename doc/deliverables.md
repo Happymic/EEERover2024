@@ -2,7 +2,7 @@
 
 | Component 							| Weight | High Mark | Medium Mark | Low Mark |
 | --------- |  --------- | --------- | ----------- | -------- |
-| **Interim Presentation (01/06/23)** | **20%** |
+| **Interim Presentation (02/06/23)** | **20%** |
 | Design progress 				| 30% | Logical division of the problem into submodules. Optimal design decisions made by evaluating alternatives against specifications. | Design decisions made but poorly justified. | Basic system design with ill-considered choice of submodules |
 | Implementation progress | 30% | Progress demonstrated on all submodules, including circuti diagrams, simulations, test results, photographs and videos. Preliminary integration of submodules | Some successful implementation. Little or no integration of subsystems. | Little or weak evidence of progress |
 | Planning 								| 15% | Work so far addresses all major uncertainties and risk areas. Realistic schedule for remaining work. | Main challenges identified and work underway to address them. Remaining work identified. | Significant uncertainties remain. Unrealistic or superficial plan for remaining work. |
