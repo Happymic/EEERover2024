@@ -52,6 +52,14 @@ Some aliens have no magnetic field at all.
 	
 The project will be assessed with an interim interview, a final report and a demo with head-to-head competition.
 
+### Reflection
+
+**Date of assessment:  Weekly**
+
+Complete a an online form each week to reflect on your professional practice
+
+Marks weighting: 5%
+
 ### Interim Presentation
 
 **Date of assessment:  1 June 2023**
@@ -70,7 +78,7 @@ The report is a formal documentation of all the technical and non-technical work
 The report should justify all your design decisions and include test results of various aspects of your prototype.
 One team member should act as overall editor to ensure that the report is consistent in style and content.
 
-Marks weighting: 40%
+Marks weighting: 35%
 			
 ### Demo
 
