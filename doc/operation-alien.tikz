@@ -72,9 +72,9 @@
 			{
 				\node [anchor=west]{Switch};&\node [anchor=west]{LED};&\node [anchor=west]{Radio};&\node [anchor=west]{Infrared};\\
 				&& \rf{0.20mm}{2mm}{10} & \pulses{4mm}{2mm}{1mm}{4}\\
-				\switches{1,0,0,1} & \leds{1,0,0,1} & \node [anchor=west]{Personalised name}; & \node [anchor=west]{Personalised pulse};\\
-				\switches{0,1,0,1} & \leds{0,1,0,1} & \node [anchor=west]{Random name}; & \node [anchor=west]{Random pulse};\\
-				\switches{1,1,0,0} & \leds{1,1,0,0} & \node [anchor=west]{Cycle through all names}; & \node [anchor=west]{Pulse synced to name};\\
+				\switches{0,0,0,1} & \leds{0,0,0,0} & \node [anchor=west]{Personalised name}; & \node [anchor=west]{Personalised pulse};\\
+				\switches{1,0,0,1} & \leds{1,0,0,0} & \node [anchor=west]{Random name}; & \node [anchor=west]{Random pulse};\\
+				\switches{0,1,0,1} & \leds{0,1,0,0} & \node [anchor=west]{Cycle through all names}; & \node [anchor=west]{Pulse synced to name};\\
 				\switches{0,0,1,0} & \leds{0,0,1,0} & \node [anchor=west]{Frequency Sweep}; & \node [anchor=west]{Pulse synced to sweep};\\
 			};
 	

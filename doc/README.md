@@ -205,6 +205,7 @@ You will need to measure the pulse frequency of the signal and this can be done 
 The optical power given by the alien is weaker than the light source you used for the EEEBug so you may need to amplify the output.
 Ambient light will cause interference and this can be filtered out by using a sensor that is only sensitive to the wavelength of the alien emmission (950nm) and by using electronic filters.
 Many sources of electric light have a strong frequency component at 100Hz due to the rectification effect of the 50Hz AC source.
+The alien habitats emit light of a different frequency and you will need to ensure it doesn't interfere with your measurement.
 
 The frequency range of the pulses is 135–1000Hz, but take care if you remove frequencies above this range.
 The pulse width of the infrared signal is just 50μs and the amplitude that you observe will be reduced if you filter out the high frequency harmonics.
