@@ -47,21 +47,139 @@
 | ----  | --- | ----- |
 | NYX | 500 | NEUTRAL |
 
-## Soltrax
+## Nexulon
 ### Correct Aliens
 | Name  | Age | Field |
 | ----  | --- | ----- |
-| TAJ | 660 | DOWN |
-| DON | 260 | UP |
-| JOY | 420 | NEUTRAL |
-| LEO | 500 | DOWN |
+| IRA | 370 | DOWN |
+| VAL | 690 | DOWN |
+| CAI | 210 | UP |
+| MAI | 530 | DOWN |
+| AMA | 130 | UP |
+| EVE | 290 | UP |
+| KIM | 450 | NEUTRAL |
+
+### Nonexistent Aliens
+| Name  | Age | Field |
+| ----  | --- | ----- |
+| REI | 610 | NEUTRAL |
+
+## Cygnon
+### Correct Aliens
+| Name  | Age | Field |
+| ----  | --- | ----- |
+| DAX | 240 | UP |
+| JAX | 400 | DOWN |
+| GEO | 320 | UP |
+| AVA | 160 | UP |
+| KOA | 480 | NEUTRAL |
+| NEO | 560 | DOWN |
+| ZEN | 720 | DOWN |
+
+### Nonexistent Aliens
+| Name  | Age | Field |
+| ----  | --- | ----- |
+| SKY | 640 | NEUTRAL |
+
+## Lyrae
+### Correct Aliens
+| Name  | Age | Field |
+| ----  | --- | ----- |
+| MAX | 540 | DOWN |
+| CAL | 220 | UP |
+| IVY | 380 | DOWN |
+| FLO | 300 | UP |
+| ARI | 140 | UP |
+| KIP | 460 | NEUTRAL |
+| VOX | 700 | DOWN |
+
+### Nonexistent Aliens
+| Name  | Age | Field |
+| ----  | --- | ----- |
+| SAL | 0 | NEUTRAL |
+
+## Zorblax
+### Correct Aliens
+| Name  | Age | Field |
+| ----  | --- | ----- |
+| KIA | 440 | NEUTRAL |
+| IDA | 360 | DOWN |
+| ULA | 680 | DOWN |
+| BEN | 200 | UP |
+| ALI | 120 | UP |
 
 ### Incorrect Aliens
 | Name  | Logged Age | Correct Age | Logged Field | Correct Field |
 | ----  | ---------- | ----------- | ------------ | ------------- |
-| HAL | 340 | 340 | NEUTRAL | DOWN |
-| AJA | 600 | 100 | UP | UP |
-| AXL | 800 | 180 | NEUTRAL | UP |
+| LUX | 250 | 520 | DOWN | DOWN |
+| EVA | 280 | 280 | DOWN | UP |
+
+### Nonexistent Aliens
+| Name  | Age | Field |
+| ----  | --- | ----- |
+| RAY | 600 | NEUTRAL |
+
+## Exodar
+### Correct Aliens
+| Name  | Age | Field |
+| ----  | --- | ----- |
+| LEX | 510 | DOWN |
+| IAN | 350 | DOWN |
+| TIA | 670 | DOWN |
+| AKI | 110 | UP |
+| AYA | 190 | UP |
+
+### Incorrect Aliens
+| Name  | Logged Age | Correct Age | Logged Field | Correct Field |
+| ----  | ---------- | ----------- | ------------ | ------------- |
+| ELI | 2700 | 270 | UP | UP |
+
+### Nonexistent Aliens
+| Name  | Age | Field |
+| ----  | --- | ----- |
+| PAZ | 590 | UP |
+
+### Missed Aliens
+| Name  | Age | Field |
+| ----  | --- | ----- |
+| KAY | 430 | NEUTRAL |
+
+## Hyperion
+### Correct Aliens
+| Name  | Age | Field |
+| ----  | --- | ----- |
+| FLO | 300 | UP |
+| KIP | 460 | NEUTRAL |
+| MAX | 540 | DOWN |
+| IVY | 380 | DOWN |
+| VOX | 700 | DOWN |
+
+### Incorrect Aliens
+| Name  | Logged Age | Correct Age | Logged Field | Correct Field |
+| ----  | ---------- | ----------- | ------------ | ------------- |
+| ARI | 140 | 140 | DOWN | UP |
+| CAL | 220 | 220 | DOWN | UP |
+
+### Nonexistent Aliens
+| Name  | Age | Field |
+| ----  | --- | ----- |
+| VOH | 620 | NEUTRAL |
+
+## Zentauri
+### Correct Aliens
+| Name  | Age | Field |
+| ----  | --- | ----- |
+| IAN | 350 | DOWN |
+| ELI | 270 | UP |
+| LEX | 510 | DOWN |
+| AYA | 190 | UP |
+| KAY | 430 | NEUTRAL |
+
+### Incorrect Aliens
+| Name  | Logged Age | Correct Age | Logged Field | Correct Field |
+| ----  | ---------- | ----------- | ------------ | ------------- |
+| TIA | 190 | 670 | DOWN | DOWN |
+| AKI | 830 | 110 | UP | UP |
 
 ### Nonexistent Aliens
 | Name  | Age | Field |
@@ -89,206 +207,26 @@
 | ----  | --- | ----- |
 | NYX | 580 | NEUTRAL |
 
-## Exodar
+## Soltrax
 ### Correct Aliens
 | Name  | Age | Field |
 | ----  | --- | ----- |
-| LEX | 510 | DOWN |
-| IAN | 350 | DOWN |
-| TIA | 670 | DOWN |
-| AKI | 110 | UP |
-| AYA | 190 | UP |
+| TAJ | 660 | DOWN |
+| DON | 260 | UP |
+| JOY | 420 | NEUTRAL |
+| LEO | 500 | DOWN |
 
 ### Incorrect Aliens
 | Name  | Logged Age | Correct Age | Logged Field | Correct Field |
 | ----  | ---------- | ----------- | ------------ | ------------- |
-| ELI | 2700 | 270 | UP | UP |
-
-### Nonexistent Aliens
-| Name  | Age | Field |
-| ----  | --- | ----- |
-| PAZ | 590 | UP |
-
-### Missed Aliens
-| Name  | Age | Field |
-| ----  | --- | ----- |
-| KAY | 430 | NEUTRAL |
-
-## Valtor
-### Correct Aliens
-| Name  | Age | Field |
-| ----  | --- | ----- |
-| TIA | 670 | DOWN |
-| IAN | 350 | DOWN |
-
-### Incorrect Aliens
-| Name  | Logged Age | Correct Age | Logged Field | Correct Field |
-| ----  | ---------- | ----------- | ------------ | ------------- |
-| AYA | 190 | 190 | NEUTRAL | UP |
-| AKI | 110 | 110 | DOWN | UP |
-| LEX | 510 | 510 | NEUTRAL | DOWN |
-| ELI | 270 | 270 | NEUTRAL | UP |
-
-### Nonexistent Aliens
-| Name  | Age | Field |
-| ----  | --- | ----- |
-| SAM | 430 | NEUTRAL |
-| NYX | 580 | DOWN |
-
-### Missed Aliens
-| Name  | Age | Field |
-| ----  | --- | ----- |
-| KAY | 430 | NEUTRAL |
-
-## Zentauri
-### Correct Aliens
-| Name  | Age | Field |
-| ----  | --- | ----- |
-| IAN | 350 | DOWN |
-| ELI | 270 | UP |
-| LEX | 510 | DOWN |
-| AYA | 190 | UP |
-| KAY | 430 | NEUTRAL |
-
-### Incorrect Aliens
-| Name  | Logged Age | Correct Age | Logged Field | Correct Field |
-| ----  | ---------- | ----------- | ------------ | ------------- |
-| TIA | 190 | 670 | DOWN | DOWN |
-| AKI | 830 | 110 | UP | UP |
+| HAL | 340 | 340 | NEUTRAL | DOWN |
+| AJA | 600 | 100 | UP | UP |
+| AXL | 800 | 180 | NEUTRAL | UP |
 
 ### Nonexistent Aliens
 | Name  | Age | Field |
 | ----  | --- | ----- |
 | NYX | 580 | NEUTRAL |
-
-## Zorblax
-### Correct Aliens
-| Name  | Age | Field |
-| ----  | --- | ----- |
-| KIA | 440 | NEUTRAL |
-| IDA | 360 | DOWN |
-| ULA | 680 | DOWN |
-| BEN | 200 | UP |
-| ALI | 120 | UP |
-
-### Incorrect Aliens
-| Name  | Logged Age | Correct Age | Logged Field | Correct Field |
-| ----  | ---------- | ----------- | ------------ | ------------- |
-| LUX | 250 | 520 | DOWN | DOWN |
-| EVA | 280 | 280 | DOWN | UP |
-
-### Nonexistent Aliens
-| Name  | Age | Field |
-| ----  | --- | ----- |
-| RAY | 600 | NEUTRAL |
-
-## Zenithar
-### Incorrect Aliens
-| Name  | Logged Age | Correct Age | Logged Field | Correct Field |
-| ----  | ---------- | ----------- | ------------ | ------------- |
-| BEN | 140 | 200 | NEUTRAL | UP |
-| ULA | 480 | 680 | NEUTRAL | DOWN |
-| IDA | 260 | 360 | DOWN | DOWN |
-| EVA | 200 | 280 | UP | UP |
-| KIA | 100 | 440 | NEUTRAL | NEUTRAL |
-| LUX | 370 | 520 | DOWN | DOWN |
-| ALI | 90 | 120 | UP | UP |
-
-### Nonexistent Aliens
-| Name  | Age | Field |
-| ----  | --- | ----- |
-| RAY | 430 | NEUTRAL |
-
-## Orionis
-### Correct Aliens
-| Name  | Age | Field |
-| ----  | --- | ----- |
-| LUX | 520 | DOWN |
-
-### Incorrect Aliens
-| Name  | Logged Age | Correct Age | Logged Field | Correct Field |
-| ----  | ---------- | ----------- | ------------ | ------------- |
-| EVA | 280 | 280 | DOWN | UP |
-| KIA | 440 | 440 | DOWN | NEUTRAL |
-| BEN | 200 | 200 | DOWN | UP |
-| ULA | 360 | 680 | DOWN | DOWN |
-| ALI | 0 | 120 | DOWN | UP |
-
-### Nonexistent Aliens
-| Name  | Age | Field |
-| ----  | --- | ----- |
-| LUKE | 600 | UP |
-
-### Missed Aliens
-| Name  | Age | Field |
-| ----  | --- | ----- |
-| IDA | 360 | DOWN |
-
-## Nexulon
-### Correct Aliens
-| Name  | Age | Field |
-| ----  | --- | ----- |
-| IRA | 370 | DOWN |
-| VAL | 690 | DOWN |
-| CAI | 210 | UP |
-| MAI | 530 | DOWN |
-| AMA | 130 | UP |
-| EVE | 290 | UP |
-| KIM | 450 | NEUTRAL |
-
-### Nonexistent Aliens
-| Name  | Age | Field |
-| ----  | --- | ----- |
-| REI | 610 | NEUTRAL |
-
-## Naxxor
-### Incorrect Aliens
-| Name  | Logged Age | Correct Age | Logged Field | Correct Field |
-| ----  | ---------- | ----------- | ------------ | ------------- |
-| IRA | 440 | 370 | NEUTRAL | DOWN |
-
-### Nonexistent Aliens
-| Name  | Age | Field |
-| ----  | --- | ----- |
-| KYC | 450 | NEUTRAL |
-| ROY | 240 | UP |
-| ZEN | 130 | UP |
-| 600 | 0 | UP |
-| EVA | 230 | DOWN |
-| AJA | 930 | NEUTRAL |
-| ZOE | 210 | UP |
-
-### Missed Aliens
-| Name  | Age | Field |
-| ----  | --- | ----- |
-| AMA | 130 | UP |
-| CAI | 210 | UP |
-| EVE | 290 | UP |
-| KIM | 450 | NEUTRAL |
-| MAI | 530 | DOWN |
-| VAL | 690 | DOWN |
-
-## Synergon
-### Nonexistent Aliens
-| Name  | Age | Field |
-| ----  | --- | ----- |
-| BOB | 30 | DOWN |
-| TOM | 450 | NEUTRAL |
-| AJA | 520 | UP |
-| AVA | 890 | UP |
-| KAT | 890 | DOWN |
-| - | 5850 | DOWN |
-
-### Missed Aliens
-| Name  | Age | Field |
-| ----  | --- | ----- |
-| AMA | 130 | UP |
-| CAI | 210 | UP |
-| EVE | 290 | UP |
-| IRA | 370 | DOWN |
-| KIM | 450 | NEUTRAL |
-| MAI | 530 | DOWN |
-| VAL | 690 | DOWN |
 
 ## Xarthon
 ### Correct Aliens
@@ -316,26 +254,68 @@
 | ----  | --- | ----- |
 | MAI | 530 | DOWN |
 
-## Hyperion
+## Krynn
 ### Correct Aliens
 | Name  | Age | Field |
 | ----  | --- | ----- |
-| FLO | 300 | UP |
-| KIP | 460 | NEUTRAL |
-| MAX | 540 | DOWN |
-| IVY | 380 | DOWN |
-| VOX | 700 | DOWN |
+| JEB | 410 | DOWN |
+| DEE | 250 | UP |
+| AVI | 170 | UP |
 
 ### Incorrect Aliens
 | Name  | Logged Age | Correct Age | Logged Field | Correct Field |
 | ----  | ---------- | ----------- | ------------ | ------------- |
-| ARI | 140 | 140 | DOWN | UP |
-| CAL | 220 | 220 | DOWN | UP |
+| ZOE | 50 | 730 | NEUTRAL | DOWN |
+| GIA | 330 | 330 | NEUTRAL | UP |
+| KYA | 990 | 490 | NEUTRAL | NEUTRAL |
+| NIA | 1120 | 570 | DOWN | DOWN |
 
 ### Nonexistent Aliens
 | Name  | Age | Field |
 | ----  | --- | ----- |
-| VOH | 620 | NEUTRAL |
+| SKY | 800 | NEUTRAL |
+
+## Vexalon
+### Correct Aliens
+| Name  | Age | Field |
+| ----  | --- | ----- |
+| ASH | 150 | UP |
+| JAN | 390 | DOWN |
+| CAM | 230 | UP |
+
+### Incorrect Aliens
+| Name  | Logged Age | Correct Age | Logged Field | Correct Field |
+| ----  | ---------- | ----------- | ------------ | ------------- |
+| FOX | 290 | 310 | NEUTRAL | UP |
+| ZEB | 400 | 710 | DOWN | DOWN |
+| MEG | 460 | 550 | DOWN | DOWN |
+| KIT | 230 | 470 | NEUTRAL | NEUTRAL |
+
+### Nonexistent Aliens
+| Name  | Age | Field |
+| ----  | --- | ----- |
+| SAL | 620 | NEUTRAL |
+
+## Iridion
+### Correct Aliens
+| Name  | Age | Field |
+| ----  | --- | ----- |
+| NIA | 570 | DOWN |
+| KYA | 490 | NEUTRAL |
+
+### Incorrect Aliens
+| Name  | Logged Age | Correct Age | Logged Field | Correct Field |
+| ----  | ---------- | ----------- | ------------ | ------------- |
+| GIA | 320 | 330 | NEUTRAL | UP |
+| JEB | 400 | 410 | DOWN | DOWN |
+| AVI | 160 | 170 | UP | UP |
+| ZOE | 720 | 730 | DOWN | DOWN |
+| DEE | 240 | 250 | UP | UP |
+
+### Nonexistent Aliens
+| Name  | Age | Field |
+| ----  | --- | ----- |
+| SAL | 620 | NEUTRAL |
 
 ## Hydronix
 ### Correct Aliens
@@ -363,22 +343,82 @@
 | ----  | --- | ----- |
 | ARI | 140 | UP |
 
-## Lyrae
+## Nimbion
 ### Correct Aliens
 | Name  | Age | Field |
 | ----  | --- | ----- |
-| MAX | 540 | DOWN |
-| CAL | 220 | UP |
-| IVY | 380 | DOWN |
-| FLO | 300 | UP |
-| ARI | 140 | UP |
-| KIP | 460 | NEUTRAL |
-| VOX | 700 | DOWN |
+| ZOE | 730 | DOWN |
+| GIA | 330 | UP |
+
+### Incorrect Aliens
+| Name  | Logged Age | Correct Age | Logged Field | Correct Field |
+| ----  | ---------- | ----------- | ------------ | ------------- |
+| DEE | 250 | 250 | NEUTRAL | UP |
+| NIA | 570 | 570 | NEUTRAL | DOWN |
+| JEB | 410 | 410 | NEUTRAL | DOWN |
 
 ### Nonexistent Aliens
 | Name  | Age | Field |
 | ----  | --- | ----- |
-| SAL | 0 | NEUTRAL |
+| SAL | 620 | NEUTRAL |
+| AVI  | 170 | UP |
+
+### Missed Aliens
+| Name  | Age | Field |
+| ----  | --- | ----- |
+| AVI | 170 | UP |
+| KYA | 490 | NEUTRAL |
+
+## Valtor
+### Correct Aliens
+| Name  | Age | Field |
+| ----  | --- | ----- |
+| TIA | 670 | DOWN |
+| IAN | 350 | DOWN |
+
+### Incorrect Aliens
+| Name  | Logged Age | Correct Age | Logged Field | Correct Field |
+| ----  | ---------- | ----------- | ------------ | ------------- |
+| AYA | 190 | 190 | NEUTRAL | UP |
+| AKI | 110 | 110 | DOWN | UP |
+| LEX | 510 | 510 | NEUTRAL | DOWN |
+| ELI | 270 | 270 | NEUTRAL | UP |
+
+### Nonexistent Aliens
+| Name  | Age | Field |
+| ----  | --- | ----- |
+| SAM | 430 | NEUTRAL |
+| NYX | 580 | DOWN |
+
+### Missed Aliens
+| Name  | Age | Field |
+| ----  | --- | ----- |
+| KAY | 430 | NEUTRAL |
+
+## Orionis
+### Correct Aliens
+| Name  | Age | Field |
+| ----  | --- | ----- |
+| LUX | 520 | DOWN |
+
+### Incorrect Aliens
+| Name  | Logged Age | Correct Age | Logged Field | Correct Field |
+| ----  | ---------- | ----------- | ------------ | ------------- |
+| EVA | 280 | 280 | DOWN | UP |
+| KIA | 440 | 440 | DOWN | NEUTRAL |
+| BEN | 200 | 200 | DOWN | UP |
+| ULA | 360 | 680 | DOWN | DOWN |
+| ALI | 0 | 120 | DOWN | UP |
+
+### Nonexistent Aliens
+| Name  | Age | Field |
+| ----  | --- | ----- |
+| LUKE | 600 | UP |
+
+### Missed Aliens
+| Name  | Age | Field |
+| ----  | --- | ----- |
+| IDA | 360 | DOWN |
 
 ## Qwazul
 ### Correct Aliens
@@ -401,26 +441,100 @@
 | ----  | --- | ----- |
 | SAL | 890 | UP |
 
-## Vexalon
+## Aerion
 ### Correct Aliens
 | Name  | Age | Field |
 | ----  | --- | ----- |
-| ASH | 150 | UP |
-| JAN | 390 | DOWN |
-| CAM | 230 | UP |
+| JAX | 400 | DOWN |
 
 ### Incorrect Aliens
 | Name  | Logged Age | Correct Age | Logged Field | Correct Field |
 | ----  | ---------- | ----------- | ------------ | ------------- |
-| FOX | 290 | 310 | NEUTRAL | UP |
-| ZEB | 400 | 710 | DOWN | DOWN |
-| MEG | 460 | 550 | DOWN | DOWN |
-| KIT | 230 | 470 | NEUTRAL | NEUTRAL |
+| KOA | 330 | 480 | DOWN | NEUTRAL |
+| GEO | 290 | 320 | DOWN | UP |
 
 ### Nonexistent Aliens
 | Name  | Age | Field |
 | ----  | --- | ----- |
-| SAL | 620 | NEUTRAL |
+| BEN | 100 | DOWN |
+| GUJ | 560 | DOWN |
+| JOE | 880 | DOWN |
+| POI | 600 | DOWN |
+| IAN | 450 | DOWN |
+
+### Missed Aliens
+| Name  | Age | Field |
+| ----  | --- | ----- |
+| AVA | 160 | UP |
+| DAX | 240 | UP |
+| NEO | 560 | DOWN |
+| ZEN | 720 | DOWN |
+
+## Synergon
+### Nonexistent Aliens
+| Name  | Age | Field |
+| ----  | --- | ----- |
+| BOB | 30 | DOWN |
+| TOM | 450 | NEUTRAL |
+| AJA | 520 | UP |
+| AVA | 890 | UP |
+| KAT | 890 | DOWN |
+| - | 5850 | DOWN |
+
+### Missed Aliens
+| Name  | Age | Field |
+| ----  | --- | ----- |
+| AMA | 130 | UP |
+| CAI | 210 | UP |
+| EVE | 290 | UP |
+| IRA | 370 | DOWN |
+| KIM | 450 | NEUTRAL |
+| MAI | 530 | DOWN |
+| VAL | 690 | DOWN |
+
+## Zenithar
+### Incorrect Aliens
+| Name  | Logged Age | Correct Age | Logged Field | Correct Field |
+| ----  | ---------- | ----------- | ------------ | ------------- |
+| BEN | 140 | 200 | NEUTRAL | UP |
+| ULA | 480 | 680 | NEUTRAL | DOWN |
+| IDA | 260 | 360 | DOWN | DOWN |
+| EVA | 200 | 280 | UP | UP |
+| KIA | 100 | 440 | NEUTRAL | NEUTRAL |
+| LUX | 370 | 520 | DOWN | DOWN |
+| ALI | 90 | 120 | UP | UP |
+
+### Nonexistent Aliens
+| Name  | Age | Field |
+| ----  | --- | ----- |
+| RAY | 430 | NEUTRAL |
+
+## Aethon
+### Incorrect Aliens
+| Name  | Logged Age | Correct Age | Logged Field | Correct Field |
+| ----  | ---------- | ----------- | ------------ | ------------- |
+| GEO | 320 | 320 | DOWN | UP |
+
+### Nonexistent Aliens
+| Name  | Age | Field |
+| ----  | --- | ----- |
+| JOE | 400 | NEUTRAL |
+| KIT | 240 | NEUTRAL |
+| JIM  | 320 | UP |
+| BEN | 160 | UP |
+| LEO | 560 | UP |
+| BOB | 640 | DOWN |
+| BEE | 480 | UP |
+
+### Missed Aliens
+| Name  | Age | Field |
+| ----  | --- | ----- |
+| AVA | 160 | UP |
+| DAX | 240 | UP |
+| JAX | 400 | DOWN |
+| KOA | 480 | NEUTRAL |
+| NEO | 560 | DOWN |
+| ZEN | 720 | DOWN |
 
 ## Xalaxion
 ### Incorrect Aliens
@@ -468,50 +582,6 @@
 | JAN | 390 | DOWN |
 | ZEB | 710 | DOWN |
 
-## Cygnon
-### Correct Aliens
-| Name  | Age | Field |
-| ----  | --- | ----- |
-| DAX | 240 | UP |
-| JAX | 400 | DOWN |
-| GEO | 320 | UP |
-| AVA | 160 | UP |
-| KOA | 480 | NEUTRAL |
-| NEO | 560 | DOWN |
-| ZEN | 720 | DOWN |
-
-### Nonexistent Aliens
-| Name  | Age | Field |
-| ----  | --- | ----- |
-| SKY | 640 | NEUTRAL |
-
-## Aethon
-### Incorrect Aliens
-| Name  | Logged Age | Correct Age | Logged Field | Correct Field |
-| ----  | ---------- | ----------- | ------------ | ------------- |
-| GEO | 320 | 320 | DOWN | UP |
-
-### Nonexistent Aliens
-| Name  | Age | Field |
-| ----  | --- | ----- |
-| JOE | 400 | NEUTRAL |
-| KIT | 240 | NEUTRAL |
-| JIM  | 320 | UP |
-| BEN | 160 | UP |
-| LEO | 560 | UP |
-| BOB | 640 | DOWN |
-| BEE | 480 | UP |
-
-### Missed Aliens
-| Name  | Age | Field |
-| ----  | --- | ----- |
-| AVA | 160 | UP |
-| DAX | 240 | UP |
-| JAX | 400 | DOWN |
-| KOA | 480 | NEUTRAL |
-| NEO | 560 | DOWN |
-| ZEN | 720 | DOWN |
-
 ## Novastra
 ### Incorrect Aliens
 | Name  | Logged Age | Correct Age | Logged Field | Correct Field |
@@ -536,100 +606,30 @@
 | GEO | 320 | UP |
 | KOA | 480 | NEUTRAL |
 
-## Aerion
-### Correct Aliens
-| Name  | Age | Field |
-| ----  | --- | ----- |
-| JAX | 400 | DOWN |
-
+## Naxxor
 ### Incorrect Aliens
 | Name  | Logged Age | Correct Age | Logged Field | Correct Field |
 | ----  | ---------- | ----------- | ------------ | ------------- |
-| KOA | 330 | 480 | DOWN | NEUTRAL |
-| GEO | 290 | 320 | DOWN | UP |
+| IRA | 440 | 370 | NEUTRAL | DOWN |
 
 ### Nonexistent Aliens
 | Name  | Age | Field |
 | ----  | --- | ----- |
-| BEN | 100 | DOWN |
-| GUJ | 560 | DOWN |
-| JOE | 880 | DOWN |
-| POI | 600 | DOWN |
-| IAN | 450 | DOWN |
+| KYC | 450 | NEUTRAL |
+| ROY | 240 | UP |
+| ZEN | 130 | UP |
+| 600 | 0 | UP |
+| EVA | 230 | DOWN |
+| AJA | 930 | NEUTRAL |
+| ZOE | 210 | UP |
 
 ### Missed Aliens
 | Name  | Age | Field |
 | ----  | --- | ----- |
-| AVA | 160 | UP |
-| DAX | 240 | UP |
-| NEO | 560 | DOWN |
-| ZEN | 720 | DOWN |
-
-## Krynn
-### Correct Aliens
-| Name  | Age | Field |
-| ----  | --- | ----- |
-| JEB | 410 | DOWN |
-| DEE | 250 | UP |
-| AVI | 170 | UP |
-
-### Incorrect Aliens
-| Name  | Logged Age | Correct Age | Logged Field | Correct Field |
-| ----  | ---------- | ----------- | ------------ | ------------- |
-| ZOE | 50 | 730 | NEUTRAL | DOWN |
-| GIA | 330 | 330 | NEUTRAL | UP |
-| KYA | 990 | 490 | NEUTRAL | NEUTRAL |
-| NIA | 1120 | 570 | DOWN | DOWN |
-
-### Nonexistent Aliens
-| Name  | Age | Field |
-| ----  | --- | ----- |
-| SKY | 800 | NEUTRAL |
-
-## Iridion
-### Correct Aliens
-| Name  | Age | Field |
-| ----  | --- | ----- |
-| NIA | 570 | DOWN |
-| KYA | 490 | NEUTRAL |
-
-### Incorrect Aliens
-| Name  | Logged Age | Correct Age | Logged Field | Correct Field |
-| ----  | ---------- | ----------- | ------------ | ------------- |
-| GIA | 320 | 330 | NEUTRAL | UP |
-| JEB | 400 | 410 | DOWN | DOWN |
-| AVI | 160 | 170 | UP | UP |
-| ZOE | 720 | 730 | DOWN | DOWN |
-| DEE | 240 | 250 | UP | UP |
-
-### Nonexistent Aliens
-| Name  | Age | Field |
-| ----  | --- | ----- |
-| SAL | 620 | NEUTRAL |
-
-## Nimbion
-### Correct Aliens
-| Name  | Age | Field |
-| ----  | --- | ----- |
-| ZOE | 730 | DOWN |
-| GIA | 330 | UP |
-
-### Incorrect Aliens
-| Name  | Logged Age | Correct Age | Logged Field | Correct Field |
-| ----  | ---------- | ----------- | ------------ | ------------- |
-| DEE | 250 | 250 | NEUTRAL | UP |
-| NIA | 570 | 570 | NEUTRAL | DOWN |
-| JEB | 410 | 410 | NEUTRAL | DOWN |
-
-### Nonexistent Aliens
-| Name  | Age | Field |
-| ----  | --- | ----- |
-| SAL | 620 | NEUTRAL |
-| AVI  | 170 | UP |
-
-### Missed Aliens
-| Name  | Age | Field |
-| ----  | --- | ----- |
-| AVI | 170 | UP |
-| KYA | 490 | NEUTRAL |
+| AMA | 130 | UP |
+| CAI | 210 | UP |
+| EVE | 290 | UP |
+| KIM | 450 | NEUTRAL |
+| MAI | 530 | DOWN |
+| VAL | 690 | DOWN |
 
