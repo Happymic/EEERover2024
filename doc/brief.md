@@ -62,7 +62,7 @@ Marks weighting: 5%
 
 ### Interim Presentation
 
-**Date of assessment:  30 may 2024**
+**Date of assessment:  30 May 2024**
 
 The interim presentation is an opportunity to show your progress mid-way through the project.
 You should prepare a presentation showing your high-level design, research and technical progress so far.
