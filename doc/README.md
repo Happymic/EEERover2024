@@ -101,7 +101,7 @@ The motors will run slowly if the battery is not available.
 Your prototype will be developed and tested using lizard simulators: electronic devices which can replicate the charcteristics of the real lizards.
 An lizard simulator is included in your kit to aid development.
  
-![User interface of the lizard](alien-config.jpg)
+![User interface of the lizard](lizard-config.jpg)
 					
 The lizard is configured by setting a group of DIP switches on its internal PCB.
 A push button is used to turn it on and off, and an LED indicates when it is active.
