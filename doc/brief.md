@@ -11,10 +11,10 @@ It will be assessed with an interim interview, a final report, and a demo.
 		
 ## Brief
 
-You are requested to design a remotely-controlled rover that can explore a remote planet and survey the alien creatures that live there.
+You are requested to design a remotely-controlled rover that can explore a deserted area and survey the lizards that live in there.
 Using a variety of electromagnetic signals, you must find out the name, age and magnetic polarity of each alien.
 
-![Aliens in their environment](alien-arena.jpg)
+![Lizards in their environment](lizard-arena.jpg)
   
 A prototype of the design must be built and tested in an artificial environment in the lab.
 The quality of the design will be assessed against the following criteria:
@@ -24,10 +24,10 @@ The quality of the design will be assessed against the following criteria:
 - Is the construction robust and reliable?
 - Is the remote control interface logical and easy to use?
 	
-## Characteristics of the aliens
+## Characteristics of the lizards
 ### Name
 
-The aliens communicate by radio and each alien will tell you its name.
+The lizards communicate by radio and each alien will tell you its name.
 Communication uses a carrier frequency of 61kHz, modulated with two-level *amplitude-shift keying* (on off modulation).
 The name is encoded using ASCII character codes in UART packets with 1 start bit and 1 stop bit.
 The data rate is 600 bits per second and each alien's name is four characters long, including an initial `#` symbol.
@@ -36,17 +36,17 @@ The data rate is 600 bits per second and each alien's name is four characters lo
 	
 ### Age
 
-Aliens have a pulse that can be detected optically, just like humans.
+Lizards have a pulse that can be detected optically, just like humans.
 As with humans, the pulse tends to slow with age, though the correlation is much stronger — the period of the pulse increases at exactly 1ms per century of lifetime.
-Unlike humans, aliens emit infrared radiation at a wavelength of 950nm, allowing the pulse to be detected by passive observation with a suitable sensor.
+Unlike humans, lizards emit infrared radiation at a wavelength of 950nm, allowing the pulse to be detected by passive observation with a suitable sensor.
 	
-Aliens spend the first century of their lives underground, so you won't encounter any aliens younger than that.
+Lizards spend the first century of their lives underground, so you won't encounter any aliens younger than that.
 	
 ### Magnetic field
 
-Most aliens have a static magnetic field orientated with their body.
-In some aliens the field points away from the top of their head, in others it points towards.
-Some aliens have no magnetic field at all.
+Most lizards have a static magnetic field orientated with their body.
+In some lizards the field points away from the top of their head, in others it points towards.
+Some lizards have no magnetic field at all.
 	
 ## Deliverables and assessments
 	
@@ -62,7 +62,7 @@ Marks weighting: 5%
 
 ### Interim Presentation
 
-**Date of assessment:  1 June 2023**
+**Date of assessment:  30 may 2024**
 
 The interim presentation is an opportunity to show your progress mid-way through the project.
 You should prepare a presentation showing your high-level design, research and technical progress so far.
@@ -72,7 +72,7 @@ Marks weighting: 20%
 	
 ### Report
 
-**Date of submission:  15 June 2023**
+**Date of submission:  13 June 2024**
 
 The report is a formal documentation of all the technical and non-technical work you have done on the project.
 The report should justify all your design decisions and include test results of various aspects of your prototype.
@@ -82,12 +82,12 @@ Marks weighting: 35%
 			
 ### Demo
 
-**Date of assessment:  20 June 2023**
+**Date of assessment:  18 June 2024**
 
 The demo is your opportunity to present your completed project.
 There are two parts to the demo:
 1. An assessment of your rover on the lab bench, where your examiner will ask to see different functional aspects and assess your theoretical understanding of the implementation
-2. A test of your rover on the demonstration arena, where multiple groups will compete to survey all the aliens in the quickest time.
+2. A test of your rover on the demonstration arena, where multiple groups will compete to survey all the lizards in the quickest time.
 
 Marks weighting: 40%
 	
@@ -122,6 +122,6 @@ You may wish to consider 3D printing, though you will need to research and teach
 
 ### Demo Environment
 The demo environment has a smooth floor with some uncrossable obstacles.
-Aliens will be distributed across the environment, spaced at least 500mm apart.
-Some aliens are very sensitive and they won't communicate if a heavy rover is nearby.
+Lizards will be distributed across the environment, spaced at least 500mm apart.
+Some lizards are very sensitive and they won't communicate if a heavy rover is nearby.
 The arena is fitted with sensors in one area to check the weight of your rover.
