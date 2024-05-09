@@ -12,13 +12,13 @@ It will be assessed with an interim interview, a final report, and a demo.
 ## Brief
 
 You are requested to design a remotely-controlled rover that can explore a deserted area and survey the lizards that live in there.
-Using a variety of electromagnetic signals, you must find out the name, age and magnetic polarity of each alien.
+Using a variety of electromagnetic signals, you must find out the name, age and magnetic polarity of each lizard.
 
 ![Lizards in their environment](lizard-arena.jpg)
   
 A prototype of the design must be built and tested in an artificial environment in the lab.
 The quality of the design will be assessed against the following criteria:
-- Is it possible to find the characteristics of all the aliens?
+- Is it possible to find the characteristics of all the lizards?
 - Is the design cost and weight effective?
 - Is the rover manoeuvrable enough to negotiate the environment?
 - Is the construction robust and reliable?
@@ -27,12 +27,12 @@ The quality of the design will be assessed against the following criteria:
 ## Characteristics of the lizards
 ### Name
 
-The lizards communicate by radio and each alien will tell you its name.
+The lizards communicate by radio and each lizard will tell you its name.
 Communication uses a carrier frequency of 61kHz, modulated with two-level *amplitude-shift keying* (on off modulation).
 The name is encoded using ASCII character codes in UART packets with 1 start bit and 1 stop bit.
-The data rate is 600 bits per second and each alien's name is four characters long, including an initial `#` symbol.
+The data rate is 600 bits per second and each lizard's name is four characters long, including an initial `#` symbol.
 	
-![Alien name encoded in radio frequency](name-encoding.png)
+![Lizard name encoded in radio frequency](name-encoding.png)
 	
 ### Age
 
@@ -40,7 +40,7 @@ Lizards have a pulse that can be detected optically, just like humans.
 As with humans, the pulse tends to slow with age, though the correlation is much stronger — the period of the pulse increases at exactly 1ms per century of lifetime.
 Unlike humans, lizards emit infrared radiation at a wavelength of 950nm, allowing the pulse to be detected by passive observation with a suitable sensor.
 	
-Lizards spend the first century of their lives underground, so you won't encounter any aliens younger than that.
+Lizards spend the first century of their lives underground, so you won't encounter any lizards younger than that.
 	
 ### Magnetic field
 
