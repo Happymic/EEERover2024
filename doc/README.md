@@ -12,7 +12,7 @@ This guide has three main aims:
  
 | Qty         | Description |
 | ----------- | ----------- |
-| 1           | Alien simulator  |
+| 1           | Lizard simulator  |
 | 2           | H-Bridge Motor Driver Module |	
 | 2           | Adafruit Metro M0 Microcontroller Module |
 | 2           | Adafruit WINC1500 WiFi Shield |
@@ -96,35 +96,35 @@ The motors will run slowly if the battery is not available.
 
 *A simplified diagram showing the connection of the Metro M0 Express and EEERover PCB power supplies*
 			
- ### Alien simulator
+ ### Lizard simulator
       
-Your prototype will be developed and tested using alien simulators: electronic devices which can replicate the charcteristics of the real aliens.
-An alien simulator is included in your kit to aid development.
+Your prototype will be developed and tested using lizard simulators: electronic devices which can replicate the charcteristics of the real lizards.
+An lizard simulator is included in your kit to aid development.
  
-![User interface of the alien](alien-config.jpg)
+![User interface of the lizard](alien-config.jpg)
 					
-The alien is configured by setting a group of DIP switches on its internal PCB.
+The lizard is configured by setting a group of DIP switches on its internal PCB.
 A push button is used to turn it on and off, and an LED indicates when it is active.
-A flow chart depicting the operation of the alien is shown below.
+A flow chart depicting the operation of the lizard is shown below.
 From standby (inactive) mode, press the button to turn on and observe the LED flashes to determine whether the battery has sufficient charge.
-After the battery display sequence is complete the alien begins emitting signals according to the mode set up on the DIP switches.
+After the battery display sequence is complete the lizard begins emitting signals according to the mode set up on the DIP switches.
 The LED flashes a code at intervals to confirm the mode selection and indicate operation.
 
-![Operation flow chart for alien simulator](operation-alien.png)
+![Operation flow chart for lizard simulator](operation-alien.png)
 
-In normal operation, the alien transmits its personalised name and pulse continuously — this will be the mode used in the final demonstration.
+In normal operation, the lizard transmits its personalised name and pulse continuously — this will be the mode used in the final demonstration.
 Other modes are available to help testing:
-- The alien can transmit a random name and pulse frequency, which will change each time it is restarted.
-- The alien can continuously cycle through all the possible names. In this mode, the pulse is synchronised to the start of each radio transmission, which can be used as an oscilloscope trigger to facilitate testing.
-- The alien can transmit a continuous radio frequency with a sweeping carrier frequency. This can be used to test the frequency response of the receiver circuit.
+- The lizard can transmit a random name and pulse frequency, which will change each time it is restarted.
+- The lizard can continuously cycle through all the possible names. In this mode, the pulse is synchronised to the start of each radio transmission, which can be used as an oscilloscope trigger to facilitate testing.
+- The lizard can transmit a continuous radio frequency with a sweeping carrier frequency. This can be used to test the frequency response of the receiver circuit.
 
 		
-Pushing the button during operation will reset the alien — this is necessary to change the operation mode.
+Pushing the button during operation will reset the lizard — this is necessary to change the operation mode.
 A second press soon afterwards will turn the device off.
-If the alien is left operating for five minutes it will automatically power off to preserve the battery.
+If the lizard is left operating for five minutes it will automatically power off to preserve the battery.
 			
-The alien cannot simulate the magnetic property in an readily-configurable manner so you are provided with a small magnet to test this functionality.
-In the demo, magnets will be placed inside the alien approximately 10mm below the highest point on its top.
+The lizard cannot simulate the magnetic property in an readily-configurable manner so you are provided with a small magnet to test this functionality.
+In the demo, magnets will be placed inside the lizard.
 The polarity of the magent in your kit depends on the colour of the disc:
 
 <img src="https://user-images.githubusercontent.com/4660308/170473263-a0c64335-e151-4071-b97a-f077de7aaca5.jpg" alt="With the disc flat on a surface, the magnetic field is orientated up from a blue disc and down with an orange disc" width="600"/>
@@ -167,14 +167,14 @@ You can also have components 3D printed if you are willing to learn the necessar
 Talk to Amine in the technicians' office if you would like to use 3D printing.
 			
 ## Implementation Hints
-The characteristics of aliens from the design brief are:
+The characteristics of lizards from the design brief are:
 - Name
 - Age (Infrared pulses)
 - Magnetism
 			
 ### Name
   
-The alien's name is transmitted as characters encoded with ASCII, framed as UART and modulated with radio frequency.
+The lizard's name is transmitted as characters encoded with ASCII, framed as UART and modulated with radio frequency.
 
 ![Name encoding](name-encoding.png)
 
@@ -194,18 +194,18 @@ A threshold can be set with a potential divider, or a more advanced approach is 
 
 As you saw in the Lab Skills work, microcontrollers have UART communication built in, and you can use your Metro module to automatically decode the demodulated binary signal into bytes.
 In the Orangepip, communication to the host PC used the same UART port as the signals presented on pins 0 and 1.
-However, the Metro board has two independent UART ports so you can use one to send debugging information over USB and a different port on pin 0 to receive messages from the alien.
+However, the Metro board has two independent UART ports so you can use one to send debugging information over USB and a different port on pin 0 to receive messages from the lizard.
 The two ports can operate at different bit rates.
 			
 ### Age
-The age of the alien is indicated by a pulsing infrared signal.
+The age of the lizard is indicated by a pulsing infrared signal.
 You have already made a light sensor as part of the EEEBug and most silicon-based photosensors (such as the EEEBug phototransistor) are just as sensitive to infrared as visible light.
 You will need to measure the pulse frequency of the signal and this can be done with analogue or digital methods.
 
-The optical power given by the alien is weaker than the light source you used for the EEEBug so you may need to amplify the output.
-Ambient light will cause interference and this can be filtered out by using a sensor that is only sensitive to the wavelength of the alien emmission (950nm) and by using electronic filters.
+The optical power given by the lizard is weaker than the light source you used for the EEEBug so you may need to amplify the output.
+Ambient light will cause interference and this can be filtered out by using a sensor that is only sensitive to the wavelength of the lizard emmission (950nm) and by using electronic filters.
 Many sources of electric light have a strong frequency component at 100Hz due to the rectification effect of the 50Hz AC source.
-The alien habitats emit light of a different frequency and you will need to ensure it doesn't interfere with your measurement.
+The lizard habitats emit light of a different frequency and you will need to ensure it doesn't interfere with your measurement.
 
 The frequency range of the pulses is 135–1000Hz, but take care if you remove frequencies above this range.
 The pulse width of the infrared signal is just 50μs and the amplitude that you observe will be reduced if you filter out the high frequency harmonics.
@@ -215,7 +215,7 @@ There may be a trade-off between the speed and the sensitivity of your sensor.
 
 			
 ### Magnetism
-The magnetic field of the alien is static, meaning that it will not induce a current in a coil of wire unless that coil is moving.
+The magnetic field of the lizard is static, meaning that it will not induce a current in a coil of wire unless that coil is moving.
 A moving coil is a possibility, but there are also sensors and switches that can detect a static magnetic field.
 Test any new components and read their datasheets to determine if any amplification or signal processing is required.
 Many sensors are designed to detect if a mechanism is open or closed (e.g. a laptop screen), and they may not work well in this application because the magnetic field may be weak due to the distance of the sensor from the magnet.
