@@ -12,7 +12,7 @@ It will be assessed with an interim interview, a final report, and a demo.
 ## Brief
 
 You are requested to design a remotely-controlled rover that can explore a deserted area and survey the lizards that live in there.
-Using a variety of electromagnetic signals, you must find out the name, age and magnetic polarity of each lizard.
+Using a variety of electromagnetic signals, you must find out the name and species of each lizard.
 
 ![Lizards in their environment](lizard-arena.jpg)
   
@@ -27,27 +27,26 @@ The quality of the design will be assessed against the following criteria:
 ## Characteristics of the lizards
 ### Name
 
-The lizards communicate by radio and each lizard will tell you its name.
-Communication uses a carrier frequency of 61kHz, modulated with two-level *amplitude-shift keying* (on off modulation).
+The lizards communicate with inaudible vocalisations and each lizard will tell you its name, if you place a suitable ultrasonic transducer near its mouth.
+Communication uses a carrier frequency of 40kHz, modulated with two-level *amplitude-shift keying* (on off modulation).
 The name is encoded using ASCII character codes in UART packets with 1 start bit and 1 stop bit.
 The data rate is 600 bits per second and each lizard's name is four characters long, including an initial `#` symbol.
 	
 ![Lizard name encoded in radio frequency](name-encoding.png)
 	
-### Age
+### Species
 
-Lizards have a pulse that can be detected optically, just like humans.
-As with humans, the pulse tends to slow with age, though the correlation is much stronger — the period of the pulse increases at exactly 1ms per century of lifetime.
-Unlike humans, lizards emit infrared radiation at a wavelength of 950nm, allowing the pulse to be detected by passive observation with a suitable sensor.
-	
-Lizards spend the first century of their lives underground, so you won't encounter any lizards younger than that.
-	
-### Magnetic field
+The lizards look different, but their colour and shape are superficial. You will need to examine other characteristics - infrared, radio and magnetic - to determine the species of a lizard.
 
-Most lizards have a static magnetic field orientated with their body.
-In some lizards the field points away from the top of their head, in others it points towards.
-Some lizards have no magnetic field at all.
-	
+The characterisitics of each species are defined below:
+
+| Species  | Infrared | Radio | Magnetic |
+| -------- | -------- | ----- | -------- |
+| Abronia  | TBD      |       | TBD      |
+| Elgaria  |          | TBD   | TBD      |
+| Dixonius | TBD      |       | TBD      |
+| Cophotis |          | TBD   | TBD      |
+
 ## Deliverables and assessments
 	
 The project will be assessed with an interim interview, a final report and a demo with head-to-head competition.
@@ -102,7 +101,7 @@ The central PCB has connections for a motor driver module, which will simplify t
 You should use the outcome of your lab experiments to develop ideas for making sensors and analogue interfaces to detect the signals.
 The EEEBug experiment showed you an example of an optical sensor.
 The Passive Networks experiment (Autumn Term) introduces the concept of resonant circuits which, if the inductor is suitably constructed and orientated, will oscillate in the presence of radio waves of the correct frequency.
-Magnetic sensors are not covered directly in the labs and you should carry out your own research in this area.
+Magnetic sensors are not covered directly in the labs and you should carry out your own research in this area. Likewise ultrasonic transducers, which are usually designed to resonate at a specific frequency.
 			
 In certain cases you may wish to detect particular frequencies while blocking others, and you have explored to do this with passive and opamp-based circuits.
 Some sensors will produce a weak signal that will need amplification.
