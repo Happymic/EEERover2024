@@ -114,12 +114,9 @@ The LED flashes a code at intervals to confirm the mode selection and indicate o
 
 ![Operation flow chart for lizard simulator](lizard-flow.png)
 
-In normal operation, the lizard transmits its personalised name and pulse continuously — this will be the mode used in the final demonstration.
-Other modes are available to help testing:
-- The lizard can transmit a random name and pulse frequency, which will change each time it is restarted.
-- The lizard can continuously cycle through all the possible names. In this mode, the pulse is synchronised to the start of each radio transmission, which can be used as an oscilloscope trigger to facilitate testing.
-- The lizard can transmit a continuous radio frequency with a sweeping carrier frequency. This can be used to test the frequency response of the receiver circuit.
-
+In normal operation, the lizard communicate its personalised name pulse frequency — this will be the mode used in the final demonstration.
+Other mode is available to help testing:
+- The lizard can communicate a random name and pulse frequency, which will change each time it is restarted.
 		
 Pushing the button during operation will reset the lizard — this is necessary to change the operation mode.
 A second press soon afterwards will turn the device off.
