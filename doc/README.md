@@ -110,7 +110,7 @@ From standby (inactive) mode, press the button to turn on and observe the LED fl
 After the battery display sequence is complete the lizard begins emitting signals according to the mode set up on the DIP switches.
 The LED flashes a code at intervals to confirm the mode selection and indicate operation.
 
-![Operation flow chart for lizard simulator](operation-alien.png)
+![Operation flow chart for lizard simulator](lizard-config.jpg)
 
 In normal operation, the lizard transmits its personalised name and pulse continuously — this will be the mode used in the final demonstration.
 Other modes are available to help testing:
