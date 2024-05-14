@@ -13,6 +13,8 @@ This guide has three main aims:
 | Qty         | Description |
 | ----------- | ----------- |
 | 1           | Lizard simulator  |
+| 1           | Breadboard  |
+| 2           | USB-A to Micro USB cable  |
 | 2           | H-Bridge Motor Driver Module |	
 | 2           | Adafruit Metro M0 Microcontroller Module |
 | 2           | Adafruit WINC1500 WiFi Shield |
@@ -168,13 +170,13 @@ Talk to Amine in the technicians' office if you would like to use 3D printing.
 			
 ## Implementation Hints
 The characteristics of lizards from the design brief are:
-- Name
-- Age (Infrared pulses)
+- Name (Ultrasonic signal)
+- Species (Infrared pulses, radio signal)
 - Magnetism
 			
 ### Name
   
-The lizard's name is transmitted as characters encoded with ASCII, framed as UART and modulated with radio frequency.
+The lizard's name is transmitted as characters encoded with ASCII, framed as UART and modulated with ultrasonic signal.
 
 ![Name encoding](name-encoding.png)
 
