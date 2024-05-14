@@ -110,7 +110,7 @@ From standby (inactive) mode, press the button to turn on and observe the LED fl
 After the battery display sequence is complete the lizard begins emitting signals according to the mode set up on the DIP switches.
 The LED flashes a code at intervals to confirm the mode selection and indicate operation.
 
-![Operation flow chart for lizard simulator](lizard-config.jpg)
+![Operation flow chart for lizard simulator](lizard-flow.jpg)
 
 In normal operation, the lizard transmits its personalised name and pulse continuously — this will be the mode used in the final demonstration.
 Other modes are available to help testing:
@@ -197,8 +197,8 @@ In the Orangepip, communication to the host PC used the same UART port as the si
 However, the Metro board has two independent UART ports so you can use one to send debugging information over USB and a different port on pin 0 to receive messages from the lizard.
 The two ports can operate at different bit rates.
 			
-### Age
-The age of the lizard is indicated by a pulsing infrared signal.
+### Species
+The species of the lizard is indicated by a pulsing infrared signal.
 You have already made a light sensor as part of the EEEBug and most silicon-based photosensors (such as the EEEBug phototransistor) are just as sensitive to infrared as visible light.
 You will need to measure the pulse frequency of the signal and this can be done with analogue or digital methods.
 
