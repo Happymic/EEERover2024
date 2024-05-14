@@ -42,10 +42,10 @@ The characterisitics of each species are defined below:
 
 | Species  | Infrared | Radio | Magnetic |
 | -------- | -------- | ----- | -------- |
-| Abronia  | TBD      |       | TBD      |
-| Elgaria  |          | TBD   | TBD      |
-| Dixonius | TBD      |       | TBD      |
-| Cophotis |          | TBD   | TBD      |
+| Abronia  | 571Hz      |       | TBD      |
+| Elgaria  |          | 120Hz   | TBD      |
+| Dixonius | 353Hz      |       | TBD      |
+| Cophotis |          | 200Hz   | TBD      |
 
 ## Deliverables and assessments
 	
