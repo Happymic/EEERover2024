@@ -3,7 +3,7 @@
 	
 ## Introduction
 	
-The Engineering Group Design Project is one of the six modules that make up your first year of study.
+The Electronics Design Project is one of the six modules that make up your first year of study.
 It brings together theoretical and practical content from your lectures and labs with important industrial skills relating to product design, project management and team working.
 		
 You will work in tutorial groups of 5–7 people to complete the project.
