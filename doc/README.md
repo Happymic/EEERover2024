@@ -125,7 +125,7 @@ If the lizard is left operating for five minutes it will automatically power off
 			
 The lizard cannot simulate the magnetic property in an readily-configurable manner so you are provided with a small magnet to test this functionality.
 In the demo, magnets will be placed inside the lizard.
-The polarity of the magent in your kit depends on the colour of the disc:
+The polarity of the magnet in your kit depends on the colour of the disc:
 
 <img src="https://user-images.githubusercontent.com/4660308/170473263-a0c64335-e151-4071-b97a-f077de7aaca5.jpg" alt="With the disc flat on a surface, the magnetic field is orientated up from a blue disc and down with an orange disc" width="600"/>
 			
