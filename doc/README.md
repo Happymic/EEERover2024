@@ -202,7 +202,7 @@ Low-pass filtering may smooth out the edges of the pulse and make frequency meas
 There can even be a problem with the sensor itself, since all optical sensors have a capacitance that acts to introduce a low-pass filter.
 There may be a trade-off between the speed and the sensitivity of your sensor.
 
-For radio signals, first you will need to convert the radio waves (AM modulated radio signal - The frequencies of the carrier (f_c) and message (f_m) signals for AM modulation are given in the operation flow chart for lizard simulator) into a signal.
+For radio signals, first you will need to convert the radio waves (AM modulated radio signal - The frequencies of the carrier (f<sub>c</sub>) and message (f<sub>m</sub>) signals for AM modulation are given in the operation flow chart for lizard simulator) into a signal.
 You can use a tuned coil antenna, which is essentially an air-cored inductor with a reasonably large diameter that you can make by coiling wire.
 This inductor can then be used in a tuned circuit that will be most sensitive at the resonant frequency.
 The lab has *LCR Bridge* instruments that can tell you the inductance of your inductor.
