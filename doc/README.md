@@ -135,7 +135,7 @@ The radio signal is emmitted from a coil antenna in the plane of the PCB.
 
 A tool for ordering components will be released later in the term. Each project group has a budget of £60 to cover all the additional components you'll need for designing and building your prototype.
 
- - [Ordering App](https://apps.powerapps.com/play/e/default-2b897507-ee8c-4575-830b-4f8267c3d307/a/3caf3d9d-1fde-4f36-a7ef-1f787e62671d?tenantId=2b897507-ee8c-4575-830b-4f8267c3d307&hint=a0c227c6-9851-466c-8a3e-d05d3216701f&sourcetime=1715268513766&hidenavbar=true)
+[Ordering App](https://apps.powerapps.com/play/e/default-2b897507-ee8c-4575-830b-4f8267c3d307/a/3caf3d9d-1fde-4f36-a7ef-1f787e62671d?tenantId=2b897507-ee8c-4575-830b-4f8267c3d307&hint=a0c227c6-9851-466c-8a3e-d05d3216701f&sourcetime=1715268513766&hidenavbar=true)
 
 You will receive an email when the parts are available for collection from Stores on level 1, near the lifts. Orders, assuming the items are in stock, will take up to a week to arrive. You can order some components directly from stores stock and these will usually be available for collection sooner.
 			
@@ -157,7 +157,7 @@ Multiple parts can be placed on the drawing as long as they fit into an area of 
 Add engraving to identify your group as the owner.
 You are strongly recommended to check your design by printing it on paper first — the scaling will be identical as long as the PDF file is printed at 100% scaling.
 
- - [ ] Confirm chassis ordering process
+
 			
 ### 3D printing and Workshop facilities
 A basic workshop is available in the lab.
