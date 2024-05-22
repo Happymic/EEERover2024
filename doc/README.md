@@ -221,7 +221,7 @@ Test any new components and read their datasheets to determine if any amplificat
 Many sensors are designed to detect if a mechanism is open or closed (e.g. a laptop screen), and they may not work well in this application because the magnetic field may be weak due to the distance of the sensor from the magnet.
 Furthermore, you need to determine the direction of the magnetic field, whether it is up or down, based on the position of the N and S poles of the magnet. In the demonstration, magnets will be placed in the lizard's mouth as shown below.
 
-![Magnet position in lizard](lizard-magnet.jpg)
+![Magnet location in lizard](magnet_location_lizard.jpg)
    
 ### Opamps
 You may wish to implement amplification or filtering using an opamp.
