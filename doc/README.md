@@ -219,14 +219,15 @@ The magnetic field of the lizard is static, meaning that it will not induce a cu
 A moving coil is a possibility, but there are also sensors and switches that can detect a static magnetic field.
 Test any new components and read their datasheets to determine if any amplification or signal processing is required.
 Many sensors are designed to detect if a mechanism is open or closed (e.g. a laptop screen), and they may not work well in this application because the magnetic field may be weak due to the distance of the sensor from the magnet.
-Furthermore, you need to determine the direction of the magnetic field, as well as its strength.
-			
+Furthermore, you need to determine the direction of the magnetic field, whether it is up or down, based on the position of the N and S poles of the magnet. In the demonstration, magnets will be placed in the lizard's mouth as shown below.
+
+![Magnet position in lizard](lizard-magnet.jpg)
+   
 ### Opamps
 You may wish to implement amplification or filtering using an opamp.
 There are many different opamps and they have different specifications.
-Some manufacturers have parametric search facilities on their websites to narrow down the options based on your specifications.
-Look at the appendix of the opamps experiment instruction to see an example of how the LT1366 device was selected for that application.
-You can use the LT1366 breadboard modules from your Lab-in-a-Box kit in your rover, but do not modify them or solder them.
+Some manufacturers have parametric search facilities on their websites to narrow down the options based on your specifications. Use the opamp knowledge you obtained last term and conduct your research to choose suitable opamps for your applications.
+
 
 There are some important parameters to consider:
 - The opamp must operate at the available power supply voltage. Some opamps are design for use at higher voltage.
