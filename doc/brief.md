@@ -121,6 +121,6 @@ You may wish to consider 3D printing, though you will need to research and teach
 
 ### Demo Environment
 The demo environment has a smooth floor with some uncrossable obstacles.
-Lizards will be distributed across the environment on the floor, spaced at least 500mm apart.
+Lizards will be distributed across the environment on the demo arena floor, spaced at least 500mm apart.
 Some lizards are very sensitive and they won't communicate if a heavy rover is nearby.
 The arena is fitted with sensors in one area to check the weight of your rover.
